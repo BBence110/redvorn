@@ -99,54 +99,68 @@
 ═══════════════════════════════════════════ -->
 <section class="szekció" id="fooldal">
 
-  <!-- Háttér média
-       ┌──────────────────────────────────────────────────────────┐
-       │ Amikor megvan a .gif fájl, add hozzá így:               │
-       │   <img src="hatter.gif" alt="">                         │
-       │ A .hero-alap-bg div egyből eltűnik mögüle.              │
-       └──────────────────────────────────────────────────────────┘ -->
+  <!-- Háttér rétegek -->
   <div class="hero-media">
-    <!-- <img src="hatter.gif" alt=""> -->
     <div class="hero-alap-bg"></div>
   </div>
-
-  <!-- Rácsos háttér és overlay -->
   <div class="hero-racs"></div>
   <div class="hero-overlay"></div>
 
-  <!-- Tartalom -->
+  <!-- Tartalom: 2 oszlop — szöveg bal, kockák jobb -->
   <div class="hero-tartalom">
 
-    <!-- Logó a heroban
-         Ha van képlogó: szedd ki a kommentet az img sor alól
-         és töröld a .hero-logo-txt sort -->
-    <div class="hero-logo-kep">
-      <!-- <img src="redvorn-logo-feher.png" alt="Redvorn"> -->
+    <!-- BAL oldal: logó + szöveg + gombok -->
+    <div class="hero-bal">
 
-      <!-- Szöveges fallback logó: -->
-      <div class="hero-logo-txt"><b>RED</b>VORN</div>
-      <div class="hero-tagline">Engineering &nbsp;<em>—</em>&nbsp; Megbízható partner ipari kivitelezésben</div>
-    </div>
+      <div class="hero-logo-kep">
+        <!-- <img src="redvorn-logo-feher.png" alt="Redvorn"> -->
+        <div class="hero-logo-txt"><b>RED</b>VORN</div>
+        <div class="hero-tagline">REDVORN &nbsp;<em>—</em>&nbsp; Engineering</div>
+      </div>
 
-    <p class="hero-szoveg">
-      Megbízható ipari alvállalkozóként vállalunk hegesztési,
-      csőszerelési és komplex ipari szerelési munkákat
-      Magyarországon és Európában.
-    </p>
-    <!-- kis kocka proba -->
-    <div class="hero-kockak-kicsi">
-    <div class="kocka-kicsi">Hegesztés</div>
-    <div class="kocka-kicsi">Csőszerelés</div>
-    <div class="kocka-kicsi">Ipari szerelés</div>
-    <div class="kocka-kicsi">Karbantartás</div>
-  </div>
+      <p class="hero-szoveg">
+        Megbízható ipari alvállalkozóként vállalunk hegesztési,
+        csőszerelési és komplex ipari szerelési munkákat
+        Magyarországon és Európában.
+      </p>
 
-    <div class="hero-gombok">
-      <a href="#kapcsolat" class="gomb-piros">Árajánlat kérés</a>
-      <a href="#szolgaltatasok" class="gomb-ures">Szolgáltatásaink</a>
-    </div>
+      <div class="hero-gombok">
+        <a href="#kapcsolat" class="gomb-piros">Árajánlat kérés</a>
+        <a href="#szolgaltatasok" class="gomb-ures">Szolgáltatásaink</a>
+      </div>
 
-  </div>
+    </div><!-- /hero-bal -->
+
+    <!-- JOBB oldal: 4 dekoratív kocka -->
+    <div class="hero-jobb">
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.1s">
+        <div class="hk-szam">01</div>
+        <div class="hk-cim">Precíz kivitelezés</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.2s">
+        <div class="hk-szam">02</div>
+        <div class="hk-cim">Megbízható együttműködés</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.3s">
+        <div class="hk-szam">03</div>
+        <div class="hk-cim">Rugalmas munkavégzés</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.4s">
+        <div class="hk-szam">04</div>
+        <div class="hk-cim">Biztonságos munkakörnyezet</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+    </div><!-- /hero-jobb -->
+
+  </div><!-- /hero-tartalom -->
 
   <!-- Scroll jelző -->
   <div class="scroll-ind">
@@ -155,6 +169,7 @@
   </div>
 
 </section>
+
 
 <div class="elvaszto"></div>
 
@@ -172,14 +187,11 @@
         <h2 class="sz-cim">MEGBÍZHATÓ<br>IPARI PARTNER</h2>
         <div class="rolunk-szoveg">
           <p>
-            A Redvorn Engineering egy frissen induló, de tapasztalt szakemberekből
-            álló ipari vállalkozás. Célunk, hogy megbízható, rugalmas alvállalkozói
-            partnerként jelen legyünk mind hazai, mind európai ipari projekteken.
-          </p>
-          <p>
-            Csapatunk tagjai évtizedes tapasztalattal rendelkeznek hegesztési,
-            csőszerelési és ipari szerelési területeken. Munkánkat ISO-szabványok
-            szerint végezzük, átlátható árazással és határidőtartással.
+
+
+            A REDVORN Ipari hegesztési és csőszerelési munkára specializálódott vállalkozás.
+            Célunk, hogy partnereink számára stabil, pontos és hosszú távon működő műszaki megoldásokat biztosítsunk.
+
           </p>
           <p>
             <!-- Szükség szerint bővíthető, adj hozzá további <p> sorokat -->
@@ -202,7 +214,7 @@
                  ═══════════════════════════════════ -->
 
             <div class="dia">
-              <!-- <img src="kep1.jpg" alt="Munka 1"> -->
+              <img src="juan.jpg" alt="teszt1"> 
               <div class="dia-ph">
                 <div class="ph-ikon">📷</div>
                 <div class="ph-szam">01 / FOTÓ</div>
@@ -210,7 +222,7 @@
             </div>
 
             <div class="dia">
-              <!-- <img src="kep2.jpg" alt="Munka 2"> -->
+              <img src="julian.jpg" alt="teszt2"> 
               <div class="dia-ph">
                 <div class="ph-ikon">📷</div>
                 <div class="ph-szam">02 / FOTÓ</div>
@@ -218,7 +230,7 @@
             </div>
 
             <div class="dia">
-              <!-- <img src="kep3.jpg" alt="Munka 3"> -->
+              <img src="pablo.jpg" alt="teszt3"> 
               <div class="dia-ph">
                 <div class="ph-ikon">📷</div>
                 <div class="ph-szam">03 / FOTÓ</div>
@@ -272,9 +284,8 @@
         <div class="szolg-szam">01</div>
         <div class="szolg-cim">Ipari Hegesztés</div>
         <p class="szolg-szoveg">
-          MIG, TIG és elektróda hegesztés ipari környezetben.
-          Acél, rozsdamentes acél és alumínium szerkezetek gyártása
-          és javítása ISO minőségbiztosítással.
+          Acél és rozsdamentes szerkezetek,
+          csőhegesztés és javítási munkák.
         </p>
       </div>
 
@@ -283,9 +294,8 @@
         <div class="szolg-szam">02</div>
         <div class="szolg-cim">Csőszerelés</div>
         <p class="szolg-szoveg">
-          Ipari csőhálózatok tervezése, szerelése és karbantartása.
-          Gőz-, olaj-, gáz- és vízvezetékek komplex kivitelezése
-          helyszínen és műhelyben egyaránt.
+          Technológiai, és ipari csővezeték 
+          rendszerek szerelése és átalakítása.
         </p>
       </div>
 
@@ -294,14 +304,11 @@
         <div class="szolg-szam">03</div>
         <div class="szolg-cim">Ipari Szerelés</div>
         <p class="szolg-szoveg">
-          Gyártósorok, ipari berendezések és acélszerkezetek
-          telepítése, összeszerelése és üzembe helyezése.
-          Rugalmas csapat, rövid határidőkkel.
+          Hosszabb ipari projektek és együttműködések.
         </p>
       </div>
-
-      <!-- Kártya 4 — bővíthető, másolj további .szolg-k blokkot -->
-      <div class="szolg-k megjeleno">
+      <!--Kártya 4 — bővíthető, másolj további .szolg-k blokkot -->
+      <!-- <div class="szolg-k megjeleno">
         <div class="szolg-szam">04</div>
         <div class="szolg-cim">Karbantartás</div>
         <p class="szolg-szoveg">
@@ -309,7 +316,8 @@
           Gyors reagálás, minimalizált állásidő, megbízható
           állapotfelmérés és javítás.
         </p>
-      </div>
+      </div> -->
+    
 
     </div><!-- /szolg-racs -->
   </div>

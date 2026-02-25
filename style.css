@@ -289,29 +289,7 @@ nav {
   padding: 5rem 2.5rem 5rem calc(2.5rem + 30px);
   animation: fadeSlideUp 0.9s ease both;
 }
-/* kocka-kicsi + hoover try*/
-.kocka-kicsi {
-  background: rgba(255, 255, 255, 0.03); /* Nagyon minimális, áttetsző háttér */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Halvány, elegáns keret */
-  border-left: 3px solid #d9232d; /* A védjegyed: a piros vonal */
-  padding: 15px;
-  text-align: center;
-  color: #ffffff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-  cursor: default;
-}
 
-/* Pici lebegő effekt a kockákon */
-.kocka-kicsi:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-3px);
-  border-color: #d9232d;
-}
 
 /* ── Logó a heroban ──
    Ha van logókép, kommenteld ki a .hero-logo-txt sort és töröld a /* kommentet a kép részből */
@@ -756,3 +734,131 @@ footer {
   .footer-belso { flex-direction: column; align-items: flex-start; }
   .footer-link-lista { gap: 1rem; }
 }
+/* Ez a proba*/
+#fooldal {
+  justify-content: center;   /* vízszintesen középre */
+  align-items: center;
+}
+
+.hero-tartalom {
+  /* régi: max-width + balra igazított padding */
+  max-width: 1150px;
+  width: 100%;
+  padding: 5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  animation: fadeSlideUp 0.9s ease both;
+}
+
+/* ── Bal oldal ── */
+.hero-bal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Jobb oldal: 2×2 kocka rács ── */
+.hero-jobb {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+/* ── Egy kocka ── */
+.hero-kocka {
+  position: relative;
+  background: var(--kartya);
+  border: 1px solid var(--keret2);
+  border-radius: 6px;
+  padding: 1.8rem 1.5rem 1.5rem;
+  overflow: hidden;
+  cursor: default;
+
+  /* Belépési animáció a delay CSS változóval */
+  opacity: 0;
+  transform: translateY(22px);
+  animation: fadeSlideUp 0.75s ease both;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Piros felső vonal — hover-re kinyúlik */
+.hero-kocka::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--piros);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.hero-kocka:hover::before { transform: scaleX(1); }
+
+/* Saroképítmény dekoráció */
+.hero-kocka::after {
+  content: '';
+  position: absolute;
+  bottom: -18px; right: -18px;
+  width: 60px; height: 60px;
+  border: 2px solid var(--keret2);
+  border-radius: 50%;
+  transition: border-color 0.3s;
+}
+.hero-kocka:hover::after { border-color: rgba(192,57,43,0.4); }
+
+/* Hover emelkedés */
+.hero-kocka:hover {
+  border-color: var(--keret2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Sorszám */
+.hk-szam {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 0.72rem;
+  letter-spacing: 3px;
+  color: var(--piros);
+  margin-bottom: 0.65rem;
+  opacity: 0.75;
+}
+
+/* Cím */
+.hk-cim {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--szoveg);
+  line-height: 1.2;
+}
+
+/* Dekorációs vonal az alján */
+.hk-dísz {
+  margin-top: 1rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--piros), transparent);
+  opacity: 0.5;
+}
+
+/* ── Reszponzív: mobilon egymás alá ── */
+@media (max-width: 920px) {
+  .hero-tartalom {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+  }
+  .hero-jobb {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .hero-jobb {
+    grid-template-columns: 1fr;
+  }
+}
+
