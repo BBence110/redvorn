@@ -862,3 +862,316 @@ footer {
   }
 }
 
+
+
+
+/* ================================================
+   ÚJ SZEKCIÓK CSS — másold a style.css végére
+   ================================================ */
+
+.piros-txt { color: var(--piros); }
+
+/* ══════════════════════════════════════
+   MIÉRT A REDVORN? — teljes szélességű
+   sötét szekció, 5 kártya vízszintesen
+══════════════════════════════════════ */
+.miert-szekció {
+  background: var(--hatter);            /* sötétebb, mint a halvany */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Atmoszferikus háttér-akcentus */
+.miert-szekció::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 300px;
+  background: radial-gradient(ellipse, rgba(192,57,43,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.miert-fejlec {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.miert-fejlec .sz-cimke {
+  justify-content: center;
+}
+.miert-fejlec .sz-cimke::before { display: none; } /* nincs bal vonal középen */
+
+.miert-racs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.1rem;
+}
+
+.miert-kartya {
+  background: var(--kartya);
+  border: 1px solid var(--keret);
+  border-radius: 6px;
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--atm), border-color var(--atm), box-shadow var(--atm);
+}
+
+/* Piros alap-vonal bal szélen */
+.miert-kartya::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--piros), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+.miert-kartya:hover {
+  transform: translateY(-5px);
+  border-color: var(--keret2);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+}
+.miert-kartya:hover::before { transform: scaleX(1); }
+
+.mk-ikon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 0 8px rgba(192,57,43,0.3));
+}
+
+.mk-cim {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--szoveg);
+  margin-bottom: 0.65rem;
+}
+
+.mk-szoveg {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--szoveg2);
+  line-height: 1.65;
+}
+
+/* Reszponzív: 3+2 majd 1 oszlop */
+@media (max-width: 1000px) {
+  .miert-racs { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 660px) {
+  .miert-racs { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 400px) {
+  .miert-racs { grid-template-columns: 1fr; }
+}
+
+
+/* ══════════════════════════════════════
+   HOGYAN DOLGOZUNK? — vízszintes timeline
+══════════════════════════════════════ */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+/* Összekötő vonal a kártyák mögött */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 28px;              /* a számok közepén */
+  left: calc(12.5%);      /* 1/8 -tól */
+  right: calc(12.5%);
+  height: 1px;
+  background: linear-gradient(90deg,
+    var(--piros) 0%,
+    var(--keret2) 60%,
+    transparent 100%);
+  z-index: 0;
+}
+
+.tl-elem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 0.8rem;
+}
+
+/* Sorszám körbe */
+.tl-szam {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--piros);
+  background: var(--hatter2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  color: var(--piros);
+  margin-bottom: 1.5rem;
+  position: relative;
+  flex-shrink: 0;
+  transition: background var(--atm), color var(--atm);
+  box-shadow: 0 0 0 4px var(--hatter2);  /* "lyuk" a vonal alatt */
+}
+.tl-elem:hover .tl-szam {
+  background: var(--piros);
+  color: #fff;
+}
+
+/* Kártya */
+.tl-kartya {
+  background: var(--kartya);
+  border: 1px solid var(--keret);
+  border-radius: 6px;
+  padding: 1.5rem 1.3rem;
+  width: 100%;
+  text-align: center;
+  transition: transform var(--atm), border-color var(--atm), box-shadow var(--atm);
+}
+.tl-elem:hover .tl-kartya {
+  transform: translateY(-4px);
+  border-color: rgba(192,57,43,0.4);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.4);
+}
+
+.tl-ikon {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+.tl-cim {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--szoveg);
+  margin-bottom: 0.6rem;
+}
+
+.tl-szoveg {
+  font-size: 0.84rem;
+  font-weight: 300;
+  color: var(--szoveg2);
+  line-height: 1.65;
+}
+
+/* Reszponzív timeline — mobilon 2×2, majd 1 oszlop */
+@media (max-width: 860px) {
+  .timeline { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .timeline::before { display: none; }
+  .tl-elem { padding: 0; }
+}
+@media (max-width: 480px) {
+  .timeline { grid-template-columns: 1fr; }
+  .tl-szam { width: 44px; height: 44px; }
+}
+
+
+/* ══════════════════════════════════════
+   MINŐSÉG & FELSZERELTSÉG — 2 oszlop
+══════════════════════════════════════ */
+.minoseg-racs {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.minoseg-szoveg {
+  font-size: 0.96rem;
+  font-weight: 300;
+  color: var(--szoveg2);
+  line-height: 1.85;
+  margin-bottom: 1.1rem;
+}
+.minoseg-szoveg:last-child { margin-bottom: 0; }
+
+/* Cert kártyák */
+.cert-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.cert-kartya {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--kartya);
+  border: 1px solid var(--keret);
+  border-radius: var(--r);
+  padding: 1rem 1.3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--atm), border-color var(--atm), box-shadow var(--atm);
+}
+
+/* Zöld glow-hatás hover-re */
+.cert-kartya::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(39,174,96,0.05) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--atm);
+}
+.cert-kartya:hover {
+  border-color: rgba(39,174,96,0.35);
+  transform: translateX(4px);
+  box-shadow: -3px 0 0 0 rgba(39,174,96,0.6), 0 4px 20px rgba(0,0,0,0.3);
+}
+.cert-kartya:hover::before { opacity: 1; }
+
+/* Pipa badge */
+.cert-bal { flex-shrink: 0; }
+.cert-pip {
+  width: 36px; height: 36px;
+  background: rgba(39,174,96,0.15);
+  border: 1px solid rgba(39,174,96,0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2ecc71;
+  transition: background var(--atm), border-color var(--atm);
+}
+.cert-kartya:hover .cert-pip {
+  background: rgba(39,174,96,0.25);
+  border-color: rgba(39,174,96,0.6);
+}
+
+.cert-cim {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--szoveg);
+  margin-bottom: 0.15rem;
+}
+.cert-szoveg {
+  font-size: 0.78rem;
+  color: var(--szoveg2);
+  font-weight: 300;
+}
+
+/* Reszponzív */
+@media (max-width: 860px) {
+  .minoseg-racs { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
