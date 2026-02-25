@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Redvorn Engineering – Hegesztés, csőszerelés, ipari szerelés Magyarországon és Európában.">
+
+  <title>Redvorn Engineering</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Saját CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGÁCIÓ
+═══════════════════════════════════════════ -->
+<nav>
+
+  <!-- Logó
+       ┌────────────────────────────────────────────────────────┐
+       │ Ha megvan a logókép:                                   │
+       │   Töröld a .nav-logo-txt sort                          │
+       │   és szedd ki a kommentet a kép sor alól              │
+       └────────────────────────────────────────────────────────┘ -->
+  <a class="nav-logo" href="#fooldal">
+    <!-- <img src="redvorn-logo.png" alt="Redvorn Engineering"> -->
+    <span class="nav-logo-txt"><b>RED</b>VORN</span>
+  </a>
+
+  <!-- Navigációs linkek -->
+  <ul class="nav-linkek">
+    <li><a href="#fooldal">Főoldal</a></li>
+    <li><a href="#rolunk">Rólunk</a></li>
+    <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+    <li><a href="#kapcsolat">Kapcsolat</a></li>
+  </ul>
+
+  <!-- Jobb oldal: nyelvváltó + témaváltó + hamburger -->
+  <div class="nav-jobb">
+
+    <!-- Nyelvválasztó -->
+    <div class="lang-v" id="langV">
+      <button class="lang-gomb" id="langGomb">
+         <img src="https://flagcdn.com/w20/hu.png" srcset="https://flagcdn.com/w40/hu.png 2x" width="20" alt="Magyar">
+          Magyar <span class="nyil">▾</span>
+        </button>
+      <!--  Alapértelmezett nyelv betűs megoldás
+        <button class="lang-gomb" id="langGomb">
+        🇭🇺 HU <span class="nyil">▾</span>
+      </button>-->
+      <div class="lang-menu">
+        <div class="lang-elem aktiv" data-lang="hu">
+          <img src="https://flagcdn.com/w20/hu.png" srcset="https://flagcdn.com/w40/hu.png 2x" width="20" alt="Magyar"> Magyar
+        </div>
+        <div class="lang-elem" data-lang="en">
+          <img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="English"> English
+        </div>
+        <div class="lang-elem" data-lang="de">
+          <img src="https://flagcdn.com/w20/de.png" srcset="https://flagcdn.com/w40/de.png 2x" width="20" alt="Deutsch"> Deutsch
+        </div>
+        <div class="lang-elem" data-lang="nl">
+          <img src="https://flagcdn.com/w20/nl.png" srcset="https://flagcdn.com/w40/nl.png 2x" width="20" alt="Netherlands"> Nederlands
+        </div>
+        <!--  Használd ezt ha betű-nyelv pl HU-Magyar-t akarsz
+        <div class="lang-elem aktiv" data-lang="hu">🇭🇺 Magyar</div>
+        <div class="lang-elem" data-lang="en">🇬🇧 English</div>
+        <div class="lang-elem" data-lang="de">🇩🇪 Deutsch</div>
+        <div class="lang-elem" data-lang="nl">🇧🇪 Nederlands</div>-->
+      </div>
+    </div>
+
+    <!-- Témaváltó -->
+    <button class="tema-btn" id="temaBtn" title="Sötét/Világos mód">🌙</button>
+
+    <!-- Hamburger (mobil) -->
+    <button class="hamburger" id="hamburger" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobil legördülő menü -->
+<div class="mobil-menu" id="mobilMenu">
+  <a href="#fooldal">Főoldal</a>
+  <a href="#rolunk">Rólunk</a>
+  <a href="#szolgaltatasok">Szolgáltatások</a>
+  <a href="#kapcsolat">Kapcsolat</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     FŐOLDAL / HERO
+═══════════════════════════════════════════ -->
+<section class="szekció" id="fooldal">
+
+  <!-- Háttér média
+       ┌──────────────────────────────────────────────────────────┐
+       │ Amikor megvan a .gif fájl, add hozzá így:               │
+       │   <img src="hatter.gif" alt="">                         │
+       │ A .hero-alap-bg div egyből eltűnik mögüle.              │
+       └──────────────────────────────────────────────────────────┘ -->
+  <div class="hero-media">
+    <!-- <img src="hatter.gif" alt=""> -->
+    <div class="hero-alap-bg"></div>
+  </div>
+
+  <!-- Rácsos háttér és overlay -->
+  <div class="hero-racs"></div>
+  <div class="hero-overlay"></div>
+
+  <!-- Tartalom -->
+  <div class="hero-tartalom">
+
+    <!-- Logó a heroban
+         Ha van képlogó: szedd ki a kommentet az img sor alól
+         és töröld a .hero-logo-txt sort -->
+    <div class="hero-logo-kep">
+      <!-- <img src="redvorn-logo-feher.png" alt="Redvorn"> -->
+
+      <!-- Szöveges fallback logó: -->
+      <div class="hero-logo-txt"><b>RED</b>VORN</div>
+      <div class="hero-tagline">Engineering &nbsp;<em>—</em>&nbsp; Megbízható partner ipari kivitelezésben</div>
+    </div>
+
+    <p class="hero-szoveg">
+      Megbízható ipari alvállalkozóként vállalunk hegesztési,
+      csőszerelési és komplex ipari szerelési munkákat
+      Magyarországon és Európában.
+    </p>
+    <!-- kis kocka proba -->
+    <div class="hero-kockak-kicsi">
+    <div class="kocka-kicsi">Hegesztés</div>
+    <div class="kocka-kicsi">Csőszerelés</div>
+    <div class="kocka-kicsi">Ipari szerelés</div>
+    <div class="kocka-kicsi">Karbantartás</div>
+  </div>
+
+    <div class="hero-gombok">
+      <a href="#kapcsolat" class="gomb-piros">Árajánlat kérés</a>
+      <a href="#szolgaltatasok" class="gomb-ures">Szolgáltatásaink</a>
+    </div>
+
+  </div>
+
+  <!-- Scroll jelző -->
+  <div class="scroll-ind">
+    <div class="scroll-ind-vonal"></div>
+    <p class="scroll-ind-txt">Görgetés</p>
+  </div>
+
+</section>
+
+<div class="elvaszto"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     RÓLUNK
+═══════════════════════════════════════════ -->
+<section class="szekció halvany" id="rolunk">
+  <div class="belso">
+    <div class="rolunk-racs">
+
+      <!-- Bal oldal: szöveg -->
+      <div class="megjeleno">
+        <div class="sz-cimke">Rólunk</div>
+        <h2 class="sz-cim">MEGBÍZHATÓ<br>IPARI PARTNER</h2>
+        <div class="rolunk-szoveg">
+          <p>
+            A Redvorn Engineering egy frissen induló, de tapasztalt szakemberekből
+            álló ipari vállalkozás. Célunk, hogy megbízható, rugalmas alvállalkozói
+            partnerként jelen legyünk mind hazai, mind európai ipari projekteken.
+          </p>
+          <p>
+            Csapatunk tagjai évtizedes tapasztalattal rendelkeznek hegesztési,
+            csőszerelési és ipari szerelési területeken. Munkánkat ISO-szabványok
+            szerint végezzük, átlátható árazással és határidőtartással.
+          </p>
+          <p>
+            <!-- Szükség szerint bővíthető, adj hozzá további <p> sorokat -->
+          </p>
+        </div>
+      </div>
+
+      <!-- Jobb oldal: képgaléria csúszka -->
+      <div class="kepgaleria megjeleno">
+        <div class="slider-wrap">
+
+          <!-- Csúszka sáv — a diasok egymás mellé kerülnek CSS flex-szel -->
+          <div class="slider-sav" id="sliderSav">
+
+            <!-- ═══════════════════════════════════
+                 KÉPEK HOZZÁADÁSA:
+                 Minden .dia blokkba tegyél egy <img>-et:
+                   <img src="kep1.jpg" alt="Leírás">
+                 A .dia-ph div ekkor automatikusan takarva lesz.
+                 ═══════════════════════════════════ -->
+
+            <div class="dia">
+              <!-- <img src="kep1.jpg" alt="Munka 1"> -->
+              <div class="dia-ph">
+                <div class="ph-ikon">📷</div>
+                <div class="ph-szam">01 / FOTÓ</div>
+              </div>
+            </div>
+
+            <div class="dia">
+              <!-- <img src="kep2.jpg" alt="Munka 2"> -->
+              <div class="dia-ph">
+                <div class="ph-ikon">📷</div>
+                <div class="ph-szam">02 / FOTÓ</div>
+              </div>
+            </div>
+
+            <div class="dia">
+              <!-- <img src="kep3.jpg" alt="Munka 3"> -->
+              <div class="dia-ph">
+                <div class="ph-ikon">📷</div>
+                <div class="ph-szam">03 / FOTÓ</div>
+              </div>
+            </div>
+
+            <div class="dia">
+              <!-- <img src="kep4.jpg" alt="Munka 4"> -->
+              <div class="dia-ph">
+                <div class="ph-ikon">📷</div>
+                <div class="ph-szam">04 / FOTÓ</div>
+              </div>
+            </div>
+
+          </div><!-- /slider-sav -->
+
+          <!-- Nyilak -->
+          <button class="sl-nyil bal" id="slNyilBal" aria-label="Előző">&#8592;</button>
+          <button class="sl-nyil jobb" id="slNyilJobb" aria-label="Következő">&#8594;</button>
+
+        </div><!-- /slider-wrap -->
+
+        <!-- Pontnavigáció (JS tölti fel) -->
+        <div class="slider-pontok" id="sliderPontok"></div>
+
+      </div><!-- /kepgaleria -->
+
+    </div><!-- /rolunk-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     SZOLGÁLTATÁSOK
+═══════════════════════════════════════════ -->
+<section class="szekció" id="szolgaltatasok">
+  <div class="belso">
+    <div class="sz-cimke megjeleno">Szolgáltatások</div>
+    <h2 class="sz-cim megjeleno">AMIT KÍNÁLUNK</h2>
+    <p class="sz-leiras megjeleno">
+      Komplex ipari megoldásokat nyújtunk alvállalkozói partnerként —
+      a tervezéstől a megvalósításig.
+    </p>
+
+    <div class="szolg-racs">
+
+      <!-- Kártya 1 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-szam">01</div>
+        <div class="szolg-cim">Ipari Hegesztés</div>
+        <p class="szolg-szoveg">
+          MIG, TIG és elektróda hegesztés ipari környezetben.
+          Acél, rozsdamentes acél és alumínium szerkezetek gyártása
+          és javítása ISO minőségbiztosítással.
+        </p>
+      </div>
+
+      <!-- Kártya 2 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-szam">02</div>
+        <div class="szolg-cim">Csőszerelés</div>
+        <p class="szolg-szoveg">
+          Ipari csőhálózatok tervezése, szerelése és karbantartása.
+          Gőz-, olaj-, gáz- és vízvezetékek komplex kivitelezése
+          helyszínen és műhelyben egyaránt.
+        </p>
+      </div>
+
+      <!-- Kártya 3 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-szam">03</div>
+        <div class="szolg-cim">Ipari Szerelés</div>
+        <p class="szolg-szoveg">
+          Gyártósorok, ipari berendezések és acélszerkezetek
+          telepítése, összeszerelése és üzembe helyezése.
+          Rugalmas csapat, rövid határidőkkel.
+        </p>
+      </div>
+
+      <!-- Kártya 4 — bővíthető, másolj további .szolg-k blokkot -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-szam">04</div>
+        <div class="szolg-cim">Karbantartás</div>
+        <p class="szolg-szoveg">
+          Tervezett és sürgős ipari karbantartási munkák.
+          Gyors reagálás, minimalizált állásidő, megbízható
+          állapotfelmérés és javítás.
+        </p>
+      </div>
+
+    </div><!-- /szolg-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     KAPCSOLAT
+═══════════════════════════════════════════ -->
+<section class="szekció halvany" id="kapcsolat">
+  <div class="belso">
+    <div class="sz-cimke megjeleno">Kapcsolat</div>
+    <h2 class="sz-cim megjeleno">LÉPJEN KAPCSOLATBA</h2>
+    <p class="sz-leiras megjeleno">
+      Csapatunk tagjai közvetlenül elérhetők. Írjon vagy hívjon minket —
+      48 órán belül válaszolunk.
+    </p>
+
+    <div class="kapcsolat-racs">
+
+      <!-- Bal: csapat -->
+      <div>
+        <p class="csapat-alcim megjeleno">Csapatunk</p>
+        <div class="csapat">
+
+          <!-- Személy 1
+               ────────────────────────────────────────
+               A .sz-eler blokkon belül adj hozzá új
+               .sz-sor sort további elérhetőségekhez.
+               ──────────────────────────────────────── -->
+          <div class="szemely megjeleno">
+            <div class="sz-nev">Kovács János</div>
+            <div class="sz-pozicio">Ügyvezető</div>
+            <div class="sz-eler">
+              <div class="sz-sor">
+                <div class="sz-ik">📞</div>
+                <a href="tel:+36301234567">+36 30 123 4567</a>
+              </div>
+              <div class="sz-sor">
+                <div class="sz-ik">✉️</div>
+                <a href="mailto:kovacs@redvorn.hu">kovacs@redvorn.hu</a>
+              </div>
+              <!-- Bővítés: pl. LinkedIn, Viber stb. -->
+              <!-- <div class="sz-sor">
+                     <div class="sz-ik">💬</div>
+                     <a href="#">LinkedIn</a>
+                   </div> -->
+            </div>
+          </div>
+
+          <!-- Személy 2 -->
+          <div class="szemely megjeleno">
+            <div class="sz-nev">Nagy Péter</div>
+            <div class="sz-pozicio">Műszaki vezető</div>
+            <div class="sz-eler">
+              <div class="sz-sor">
+                <div class="sz-ik">📞</div>
+                <a href="tel:+36309876543">+36 30 987 6543</a>
+              </div>
+              <div class="sz-sor">
+                <div class="sz-ik">✉️</div>
+                <a href="mailto:nagy@redvorn.hu">nagy@redvorn.hu</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Személy 3 -->
+          <div class="szemely megjeleno">
+            <div class="sz-nev">Szabó Attila</div>
+            <div class="sz-pozicio">Projekt koordinátor</div>
+            <div class="sz-eler">
+              <div class="sz-sor">
+                <div class="sz-ik">📞</div>
+                <a href="tel:+36305554444">+36 30 555 4444</a>
+              </div>
+              <div class="sz-sor">
+                <div class="sz-ik">✉️</div>
+                <a href="mailto:szabo@redvorn.hu">szabo@redvorn.hu</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /csapat -->
+      </div>
+
+      <!-- Jobb: kapcsolatfelvevő űrlap -->
+      <div class="urlap-doboz megjeleno">
+        <div class="urlap-fejlec">
+          <div class="urlap-fejlec-cim">Írjon nekünk</div>
+          <div class="urlap-fejlec-vonal"></div>
+        </div>
+
+        <!-- Ha valódi e-mail küldést akarsz, add meg a Formspree action-t:
+             <form id="kapcsolatUrlap" action="https://formspree.io/f/XXXXXXXX" method="POST"> -->
+        <form id="kapcsolatUrlap">
+          <div class="urlap-sor">
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Név</label>
+              <input class="mezo" type="text" name="nev" placeholder="Teljes névv" required>
+            </div>
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Cég</label>
+              <input class="mezo" type="text" name="ceg" placeholder="Cégnév (opcionális)">
+            </div>
+          </div>
+          <div class="urlap-sor">
+            <div class="mezocsoport">
+              <label class="mezo-cimke">E-mail</label>
+              <input class="mezo" type="email" name="email" placeholder="email@ceg.hu" required>
+            </div>
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Telefon</label>
+              <input class="mezo" type="tel" name="telefon" placeholder="+36 30 ...">
+            </div>
+          </div>
+          <div class="mezocsoport">
+            <label class="mezo-cimke">Üzenet</label>
+            <textarea class="mezo" name="uzenet" placeholder="Rövid leírás a projektről, igényről..." required></textarea>
+          </div>
+          <button type="submit" class="kuldes-btn">
+            Üzenet küldése &rarr;
+          </button>
+        </form>
+
+        <!-- Sikeres küldés visszajelzés -->
+        <div class="urlap-ok" id="urlapOk">
+          <div class="pip">✅</div>
+          <h3>Üzenet elküldve!</h3>
+          <p>Hamarosan felvesszük Önnel a kapcsolatot.</p>
+        </div>
+
+      </div><!-- /urlap-doboz -->
+
+    </div><!-- /kapcsolat-racs -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-belso">
+
+    <!-- Logó hivatkozással -->
+    <a class="footer-logo" href="#fooldal">
+      <!-- <img src="redvorn-logo.png" alt="Redvorn"> -->
+      <span class="footer-logo-txt"><b>RED</b>VORN</span>
+    </a>
+
+    <!-- Nav linkek -->
+    <div class="footer-link-lista">
+      <a href="#fooldal">Főoldal</a>
+      <a href="#rolunk">Rólunk</a>
+      <a href="#szolgaltatasok">Szolgáltatások</a>
+      <a href="#kapcsolat">Kapcsolat</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="footer-copy">
+      &copy; 2025 Redvorn Engineering. Minden jog fenntartva.
+    </p>
+
+  </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+
+</body>
+</html>
