@@ -1,5 +1,5 @@
 /* ================================================
-   REDVORN ENGINEERING — style.css
+   REDVORN ENGINEERING — style.css- By: BBM
    ================================================ */
 
 /* ── VÁLTOZÓK ── */
@@ -253,9 +253,6 @@ nav {
   overflow: hidden;
 }
 
-/* ── GIF/kép tartó ──
-   Ha van gifed, adj hozzá background-image stílust vagy tedd bele az <img> taget.
-   Jelenleg atmoszferikus placeholder látszik. */
 .hero-media {
   position: absolute; inset: 0; z-index: 0;
 }
@@ -270,6 +267,7 @@ nav {
     radial-gradient(ellipse 80% 70% at 65% 50%, rgba(192,57,43,0.1) 0%, transparent 65%),
     repeating-linear-gradient(-45deg, transparent 0, transparent 38px, rgba(192,57,43,0.022) 38px, rgba(192,57,43,0.022) 39px);
 }
+/* Ha azt akarod hogy rácsos legyen a stílus */
 /* .hero-racs {
   position: absolute; inset: 0;
   background-image:
@@ -295,8 +293,8 @@ nav {
 /* ── Logó a heroban ──*/
 .hero-logo-kep { margin-bottom: 2rem; display: flex; align-items: center;}
 .hero-logo-kep img {
-  width: 100%;           /* kitölti a bal oszlopot */
-  max-width: 420px;      /* maximum méret — csökkentsd ha kell: 360px, 380px */
+  width: 100%;           
+  max-width: 420px;      
   height: auto;
   filter: drop-shadow(0 6px 30px rgba(192,57,43,.45));
 }
@@ -305,7 +303,6 @@ nav {
 [data-theme="light"] .hero-logo-kep .logo-sotet  { display: block; }
 [data-theme="light"] .hero-logo-kep .logo-vilagos { display: none; }
 
-/* Szöveges fallback logó (ha nincs kép): */
 .hero-logo-txt {
   font-family: 'Bebas Neue', cursive;
   font-size: clamp(3.5rem, 7vw, 6.5rem);
@@ -332,7 +329,6 @@ nav {
 
 .hero-gombok { display: flex; gap: 1rem; flex-wrap: wrap; }
 
-/* Scroll indikátor */
 .scroll-ind {
   position: absolute; bottom: 2rem; left: 50%;
   transform: translateX(-50%);
@@ -351,9 +347,6 @@ nav {
   text-transform: uppercase; color: var(--szoveg2);
 }
 
-/* ══════════════════════════════════════
-   KÖZÖS SZEKCIÓ
-══════════════════════════════════════ */
 .szekció { position: relative; z-index: 1; }
 .halvany { background: var(--hatter2); }
 .belso { max-width: 1150px; margin: 0 auto; padding: 6rem 2.5rem; }
@@ -385,10 +378,6 @@ nav {
   background: linear-gradient(90deg, transparent, var(--piros) 35%, var(--piros) 65%, transparent);
   opacity: 0.45;
 }
-
-/* ══════════════════════════════════════
-   RÓLUNK
-══════════════════════════════════════ */
 .rolunk-racs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -402,7 +391,6 @@ nav {
 }
 .rolunk-szoveg p:last-child { margin-bottom: 0; }
 
-/* ── Képcsúszka (Carousel) ── */
 .kepgaleria { position: relative; }
 
 .slider-wrap {
@@ -436,7 +424,6 @@ nav {
 }
 .slider-wrap:hover .dia.aktiv-dia img { transform: scale(1.05); }
 
-/* Placeholder amíg nincs fotó */
 .dia-ph {
   width: 100%; height: 100%;
   background: var(--hatter3);
@@ -450,7 +437,6 @@ nav {
   color: var(--szoveg3);
 }
 
-/* Előző/Következő nyíl */
 .sl-nyil {
   position: absolute; top: 50%; transform: translateY(-50%);
   z-index: 10;
@@ -471,7 +457,6 @@ nav {
 .sl-nyil.bal { left: 15px; }
 .sl-nyil.jobb { right: 15px; }
 
-/* Pontnavigáció */
 .slider-pontok {
   display: flex; justify-content: center;
   gap: 7px; margin-top: 1.1rem;
@@ -489,9 +474,6 @@ nav {
   width: 20px;
 }
 
-/* ══════════════════════════════════════
-   SZOLGÁLTATÁSOK
-══════════════════════════════════════ */
 .szolg-racs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -536,16 +518,12 @@ nav {
   color: var(--szoveg2); line-height: 1.72;
 }
 
-/* ══════════════════════════════════════
-   KAPCSOLAT
-══════════════════════════════════════ */
 .kapcsolat-racs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem; align-items: start;
 }
 
-/* Csapat kártyák */
 .csapat { display: flex; flex-direction: column; gap: 1.1rem; }
 .csapat-alcim {
   font-family: 'Barlow Condensed', sans-serif;
@@ -589,9 +567,7 @@ nav {
   display: flex; align-items: center; justify-content: center;
   font-size: 0.8rem; flex-shrink: 0;
 }
-/* Bővítési hely: adj hozzá új .sz-sor sort a HTML-ben */
 
-/* ── Kapcsolatfelvevő űrlap ── */
 .urlap-doboz {
   background: var(--kartya);
   border: 1px solid var(--keret);
@@ -663,9 +639,6 @@ textarea.mezo { resize: vertical; min-height: 108px; }
 }
 .urlap-ok p { color: var(--szoveg2); font-size: 0.9rem; }
 
-/* ══════════════════════════════════════
-   FOOTER
-══════════════════════════════════════ */
 footer {
   background: var(--hatter2);
   border-top: 1px solid var(--keret);
@@ -700,9 +673,7 @@ footer {
 
 .footer-copy { font-size: 0.76rem; color: var(--szoveg3); }
 
-/* ══════════════════════════════════════
-   SCROLL ANIMÁCIÓ
-══════════════════════════════════════ */
+
 .megjeleno {
   opacity: 0; transform: translateY(26px);
   transition: opacity 0.62s ease, transform 0.62s ease;
@@ -725,9 +696,7 @@ footer {
   50%       { opacity: 0.6; transform: translateX(-50%) translateY(7px); }
 }
 
-/* ══════════════════════════════════════
-   RESZPONZÍV
-══════════════════════════════════════ */
+
 @media (max-width: 920px) {
   .nav-linkek { display: none; }
   .hamburger { display: flex !important;}
@@ -751,7 +720,7 @@ footer {
 }
 
 .hero-tartalom {
-  /* régi: max-width + balra igazított padding */
+
   max-width: 1150px;
   width: 100%;
   padding: 5rem 2.5rem;
@@ -762,21 +731,18 @@ footer {
   animation: fadeSlideUp 0.9s ease both;
 }
 
-/* ── Bal oldal ── */
 .hero-bal {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-/* ── Jobb oldal: 2×2 kocka rács ── */
 .hero-jobb {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.1rem;
 }
 
-/* ── Egy kocka ── */
 .hero-kocka {
   position: relative;
   background: var(--kartya);
@@ -785,15 +751,12 @@ footer {
   padding: 1.8rem 1.5rem 1.5rem;
   overflow: hidden;
   cursor: default;
-
-  /* Belépési animáció a delay CSS változóval */
   opacity: 0;
   transform: translateY(22px);
   animation: fadeSlideUp 0.75s ease both;
   animation-delay: var(--delay, 0s);
 }
 
-/* Piros felső vonal — hover-re kinyúlik */
 .hero-kocka::before {
   content: '';
   position: absolute;
@@ -806,7 +769,6 @@ footer {
 }
 .hero-kocka:hover::before { transform: scaleX(1); }
 
-/* Saroképítmény dekoráció */
 .hero-kocka::after {
   content: '';
   position: absolute;
@@ -818,7 +780,6 @@ footer {
 }
 .hero-kocka:hover::after { border-color: rgba(192,57,43,0.4); }
 
-/* Hover emelkedés */
 .hero-kocka:hover {
   border-color: var(--keret2);
   transform: translateY(-4px);
@@ -826,7 +787,6 @@ footer {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Sorszám */
 .hk-szam {
   font-family: 'Bebas Neue', cursive;
   font-size: 0.72rem;
@@ -836,7 +796,6 @@ footer {
   opacity: 0.75;
 }
 
-/* Cím */
 .hk-cim {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.15rem;
@@ -847,7 +806,6 @@ footer {
   line-height: 1.2;
 }
 
-/* Dekorációs vonal az alján */
 .hk-dísz {
   margin-top: 1rem;
   height: 1px;
@@ -855,7 +813,6 @@ footer {
   opacity: 0.5;
 }
 
-/* ── Reszponzív: mobilon egymás alá ── */
 @media (max-width: 920px) {
   .hero-tartalom {
     grid-template-columns: 1fr;
@@ -872,26 +829,14 @@ footer {
   }
 }
 
-
-
-
-/* ================================================
-   ÚJ SZEKCIÓK CSS — másold a style.css végére
-   ================================================ */
-
 .piros-txt { color: var(--piros); }
 
-/* ══════════════════════════════════════
-   MIÉRT A REDVORN? — teljes szélességű
-   sötét szekció, 5 kártya vízszintesen
-══════════════════════════════════════ */
 .miert-szekció {
-  background: var(--hatter);            /* sötétebb, mint a halvany */
+  background: var(--hatter);            
   position: relative;
   overflow: hidden;
 }
 
-/* Atmoszferikus háttér-akcentus */
 .miert-szekció::before {
   content: '';
   position: absolute;
@@ -909,7 +854,7 @@ footer {
 .miert-fejlec .sz-cimke {
   justify-content: center;
 }
-.miert-fejlec .sz-cimke::before { display: none; } /* nincs bal vonal középen */
+.miert-fejlec .sz-cimke::before { display: none; } 
 
 .miert-racs {
   display: grid;
@@ -928,7 +873,6 @@ footer {
   transition: transform var(--atm), border-color var(--atm), box-shadow var(--atm);
 }
 
-/* Piros alap-vonal bal szélen */
 .miert-kartya::before {
   content: '';
   position: absolute;
@@ -970,7 +914,6 @@ footer {
   line-height: 1.65;
 }
 
-/* Reszponzív: 3+2 majd 1 oszlop */
 @media (max-width: 1000px) {
   .miert-racs { grid-template-columns: repeat(3, 1fr); }
 }
@@ -981,10 +924,6 @@ footer {
   .miert-racs { grid-template-columns: 1fr; }
 }
 
-
-/* ══════════════════════════════════════
-   HOGYAN DOLGOZUNK? — vízszintes timeline
-══════════════════════════════════════ */
 .timeline {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -992,12 +931,11 @@ footer {
   position: relative;
 }
 
-/* Összekötő vonal a kártyák mögött */
 .timeline::before {
   content: '';
   position: absolute;
-  top: 28px;              /* a számok közepén */
-  left: calc(12.5%);      /* 1/8 -tól */
+  top: 28px;              
+  left: calc(12.5%);      
   right: calc(12.5%);
   height: 1px;
   background: linear-gradient(90deg,
@@ -1016,7 +954,6 @@ footer {
   padding: 0 0.8rem;
 }
 
-/* Sorszám körbe */
 .tl-szam {
   width: 52px; height: 52px;
   border-radius: 50%;
@@ -1033,14 +970,14 @@ footer {
   position: relative;
   flex-shrink: 0;
   transition: background var(--atm), color var(--atm);
-  box-shadow: 0 0 0 4px var(--hatter2);  /* "lyuk" a vonal alatt */
+  box-shadow: 0 0 0 4px var(--hatter2);  
 }
 .tl-elem:hover .tl-szam {
   background: var(--piros);
   color: #fff;
 }
 
-/* Kártya */
+
 .tl-kartya {
   background: var(--kartya);
   border: 1px solid var(--keret);
@@ -1079,7 +1016,6 @@ footer {
   line-height: 1.65;
 }
 
-/* Reszponzív timeline — mobilon 2×2, majd 1 oszlop */
 @media (max-width: 860px) {
   .timeline { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .timeline::before { display: none; }
@@ -1090,10 +1026,6 @@ footer {
   .tl-szam { width: 44px; height: 44px; }
 }
 
-
-/* ══════════════════════════════════════
-   MINŐSÉG & FELSZERELTSÉG — 2 oszlop
-══════════════════════════════════════ */
 .minoseg-racs {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -1110,7 +1042,6 @@ footer {
 }
 .minoseg-szoveg:last-child { margin-bottom: 0; }
 
-/* Cert kártyák */
 .cert-lista {
   display: flex;
   flex-direction: column;
@@ -1130,7 +1061,6 @@ footer {
   transition: transform var(--atm), border-color var(--atm), box-shadow var(--atm);
 }
 
-/* Zöld glow-hatás hover-re */
 .cert-kartya::before {
   content: '';
   position: absolute;
@@ -1146,7 +1076,6 @@ footer {
 }
 .cert-kartya:hover::before { opacity: 1; }
 
-/* Pipa badge */
 .cert-bal { flex-shrink: 0; }
 .cert-pip {
   width: 36px; height: 36px;
@@ -1180,13 +1109,10 @@ footer {
   font-weight: 300;
 }
 
-/* Reszponzív */
 @media (max-width: 860px) {
   .minoseg-racs { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
-/* ── VIDEÓ HÁTTÉR ── 
- opacity: xxxx;   /* 0.3 = sötétebb, 0.6 = világosabb  */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -1195,12 +1121,10 @@ footer {
   object-fit: cover;
   object-position: center;
 
-  /* Sötét módban világosabb videó */
   opacity: 0.75;
   transition: opacity 0.4s ease;
 }
 
-/* Világos módban sötétebb videó */
 [data-theme="light"] .hero-video {
   opacity: 0.99;
 }
