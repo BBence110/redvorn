@@ -80,7 +80,7 @@ nav {
 
 /* Nav logó */
 .nav-logo { flex-shrink: 0; display: flex; align-items: center; }
-.nav-logo img { height: 34px; width: auto; }
+.nav-logo img { height: 180px; width: auto; }
 /* Szöveges logó fallback */
 .nav-logo-txt {
   font-family: 'Bebas Neue', cursive;
@@ -291,11 +291,10 @@ nav {
 }
 
 
-/* ── Logó a heroban ──
-   Ha van logókép, kommenteld ki a .hero-logo-txt sort és töröld a /* kommentet a kép részből */
+/* ── Logó a heroban ──*/
 .hero-logo-kep { margin-bottom: 1.8rem; }
 .hero-logo-kep img {
-  height: 80px; width: auto;
+  height: 500px; width: auto;
   filter: drop-shadow(0 4px 25px rgba(192,57,43,.3));
 }
 /* Szöveges fallback logó (ha nincs kép): */
