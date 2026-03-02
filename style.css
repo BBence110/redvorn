@@ -81,7 +81,7 @@ nav {
 
 /* Nav logó */
 .nav-logo { flex-shrink: 0; display: flex; align-items: center; height: 100%;}
-.nav-logo img { height: 150px; width: auto; position: relative; z-index: 1001; transition: opacity 0.25s ease; } 
+.nav-logo img { height: 45px; width: auto; position: relative; z-index: 1001; transition: opacity 0.25s ease; } 
 /* Logika: alapértelmezett sötét móban el kell rejteni a világos logot. 
           váltásnál a sötét logo-t megjelenítjük és világos tűnik el */
 .nav-logo .logo-sotet  { display: none; }
@@ -300,6 +300,11 @@ nav {
   height: auto;
   filter: drop-shadow(0 6px 30px rgba(192,57,43,.45));
 }
+.hero-logo-kep .logo-sotet  { display: none; }
+.hero-logo-kep .logo-vilagos { display: block; }
+[data-theme="light"] .hero-logo-kep .logo-sotet  { display: block; }
+[data-theme="light"] .hero-logo-kep .logo-vilagos { display: none; }
+
 /* Szöveges fallback logó (ha nincs kép): */
 .hero-logo-txt {
   font-family: 'Bebas Neue', cursive;
