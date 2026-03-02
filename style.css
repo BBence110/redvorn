@@ -269,13 +269,13 @@ nav {
     radial-gradient(ellipse 80% 70% at 65% 50%, rgba(192,57,43,0.1) 0%, transparent 65%),
     repeating-linear-gradient(-45deg, transparent 0, transparent 38px, rgba(192,57,43,0.022) 38px, rgba(192,57,43,0.022) 39px);
 }
-.hero-racs {
+/* .hero-racs {
   position: absolute; inset: 0;
   background-image:
     linear-gradient(var(--keret) 1px, transparent 1px),
     linear-gradient(90deg, var(--keret) 1px, transparent 1px);
   background-size: 55px 55px; opacity: 0.55;
-}
+} */
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(100deg, rgba(8,8,8,.92) 0%, rgba(8,8,8,.60) 55%, rgba(8,8,8,.15) 100%);
@@ -457,8 +457,8 @@ nav {
   cursor: pointer;
 }
 .sl-nyil:hover { background: var(--piros); border-color: var(--piros); }
-.sl-nyil.bal { left: 12px; }
-.sl-nyil.jobb { right: 12px; }
+.sl-nyil.bal { left: 15px; }
+.sl-nyil.jobb { right: 15px; }
 
 /* Pontnavigáció */
 .slider-pontok {
@@ -1174,3 +1174,26 @@ footer {
   .minoseg-racs { grid-template-columns: 1fr; gap: 2.5rem; }
 }
 
+/* ── VIDEÓ HÁTTÉR ── 
+ opacity: xxxx;   /* 0.3 = sötétebb, 0.6 = világosabb  */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  /* Sötét módban világosabb videó */
+  opacity: 0.75;
+  transition: opacity 0.4s ease;
+}
+
+/* Világos módban sötétebb videó */
+[data-theme="light"] .hero-video {
+  opacity: 0.99;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+}
