@@ -25,7 +25,7 @@
   --atm:    0.22s ease;
 }
 
-[data-theme="light"] {
+/* [data-theme="light"] {
   --hatter:  #f3f3f3;
   --hatter2: #eaeaea;
   --hatter3: #dfdfdf;
@@ -36,7 +36,7 @@
   --szoveg2: #555;
   --szoveg3: #aaa;
   --nav-bg:  rgba(243,243,243,0.97);
-}
+} */
 
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -92,8 +92,8 @@ nav {
           váltásnál a sötét logo-t megjelenítjük és világos tűnik el */
 .nav-logo .logo-sotet  { display: none; }
 .nav-logo .logo-vilagos { display: block; }
-[data-theme="light"] .nav-logo .logo-sotet  { display: block; }
-[data-theme="light"] .nav-logo .logo-vilagos { display: none; }
+/* [data-theme="light"] .nav-logo .logo-sotet  { display: block; }
+[data-theme="light"] .nav-logo .logo-vilagos { display: none; } */
 
 /* Nav linkek */
 .nav-linkek {
@@ -114,7 +114,7 @@ nav {
   transition: color var(--atm), background var(--atm);
 }
 .nav-linkek a:hover { color: var(--szoveg); background: rgba(255,255,255,0.05); }
-[data-theme="light"] .nav-linkek a:hover { background: rgba(0,0,0,0.06); }
+/* [data-theme="light"] .nav-linkek a:hover { background: rgba(0,0,0,0.06); } */
 
 /* Nav jobb oldal */
 .nav-jobb { margin-left: auto; display: flex; align-items: center; gap: 0.6rem; }
@@ -283,13 +283,13 @@ nav {
     linear-gradient(90deg, var(--keret) 1px, transparent 1px);
   background-size: 55px 55px; opacity: 0.55;
 } */
-.hero-overlay {
+/* .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(100deg, rgba(8,8,8,.92) 0%, rgba(8,8,8,.60) 55%, rgba(8,8,8,.15) 100%);
 }
 [data-theme="light"] .hero-overlay {
   background: linear-gradient(100deg, rgba(243,243,243,.94) 0%, rgba(243,243,243,.65) 55%, rgba(243,243,243,.15) 100%);
-}
+} */
 
 .hero-tartalom {
   position: relative; z-index: 2;
@@ -308,8 +308,8 @@ nav {
 }
 .hero-logo-kep .logo-sotet  { display: none; }
 .hero-logo-kep .logo-vilagos { display: block; }
-[data-theme="light"] .hero-logo-kep .logo-sotet  { display: block; }
-[data-theme="light"] .hero-logo-kep .logo-vilagos { display: none; }
+/* [data-theme="light"] .hero-logo-kep .logo-sotet  { display: block; }
+[data-theme="light"] .hero-logo-kep .logo-vilagos { display: none; } */
 
 .hero-logo-txt {
   font-family: 'Bebas Neue', cursive;
@@ -356,7 +356,7 @@ nav {
 }
 
 .szekció { position: relative; z-index: 1; }
-.halvany { background: var(--hatter2); }
+
 .belso { max-width: 1150px; margin: 0 auto; padding: 6rem 2.5rem; }
 
 .sz-cimke {
@@ -489,8 +489,10 @@ nav {
 }
 
 .szolg-k {
-  background: var(--kartya);
-  border: 1px solid var(--keret);
+  background: rgba(8,8,8,0.70);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 6px;
   padding: 2rem 1.8rem 2.2rem;
   position: relative; overflow: hidden;
@@ -541,8 +543,10 @@ nav {
 }
 
 .szemely {
-  background: var(--kartya);
-  border: 1px solid var(--keret);
+  background: rgba(8,8,8,0.70);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-left: 3px solid var(--piros);
   border-radius: var(--r);
   padding: 1.3rem 1.5rem;
@@ -577,8 +581,10 @@ nav {
 }
 
 .urlap-doboz {
-  background: var(--kartya);
-  border: 1px solid var(--keret);
+  background: rgba(8,8,8,0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 6px;
   padding: 2.2rem;
   position: sticky;
@@ -604,8 +610,8 @@ nav {
   color: var(--szoveg3);
 }
 .mezo {
-  background: var(--hatter3);
-  border: 1px solid var(--keret);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
   border-radius: var(--r);
   padding: 10px 13px;
   color: var(--szoveg);
@@ -613,7 +619,7 @@ nav {
   font-size: 0.9rem; outline: none; width: 100%;
   transition: border-color var(--atm), background var(--atm);
 }
-.mezo::placeholder { color: var(--szoveg3); }
+.mezo::placeholder { color: #777; font-size: 0.92rem; }
 .mezo:focus { border-color: var(--piros); background: var(--hatter2); }
 textarea.mezo { resize: vertical; min-height: 108px; }
 
@@ -873,8 +879,10 @@ footer {
 }
 
 .miert-kartya {
-  background: var(--kartya);
-  border: 1px solid var(--keret);
+  background: rgba(8,8,8,0.70);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 6px;
   padding: 1.8rem 1.4rem;
   text-align: center;
@@ -968,7 +976,7 @@ footer {
   width: 52px; height: 52px;
   border-radius: 50%;
   border: 2px solid var(--piros);
-  background: var(--hatter2);
+  background: rgba(8,8,8,0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -989,8 +997,10 @@ footer {
 
 
 .tl-kartya {
-  background: var(--kartya);
-  border: 1px solid var(--keret);
+  background: rgba(8,8,8,0.70);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 6px;
   padding: 1.5rem 1.3rem;
   width: 100%;
@@ -1062,8 +1072,10 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: var(--kartya);
-  border: 1px solid var(--keret);
+  background: rgba(8,8,8,0.70);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--r);
   padding: 1rem 1.3rem;
   position: relative;
@@ -1131,14 +1143,261 @@ footer {
   object-fit: cover;
   object-position: center;
 
-  opacity: 0.75;
+  opacity: 1;
   transition: opacity 0.4s ease;
 }
 
 [data-theme="light"] .hero-video {
-  opacity: 0.99;
+  opacity: 5;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
+}
+
+.szekció-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+/* Rúlunk-csöves, miért minket-barna szolgaltatasok-heggeszto hogyan dolgozunk- üres, minoseg-narancs cso, kapcsolat- kézfogo */
+#rolunk         { background-image: url('pics/oil-pipeline.jpg'); }
+#miert          { background-image: url('pics/large-pipes-at-construction-site.jpg'); }
+#szolgaltatasok { background-image: url('pics/welder-performing-tig-welding-on-metal-pipe-.JPG'); }
+#folyamat       { background-image: url('pics/different-size-and-shaped-pipes-at-a-power-plant.jpg'); }
+#minoseg        { background-image: url('pics/engineer-inspecting-damaged-industrial-pipe-system.JPG'); }
+#kapcsolat      { background-image: url('pics/business-partnership-shaking-hands-for-signing.jpg'); }
+
+/* ── Rólunk: középre igazítva, sötét kártyában ── */
+/* #rolunk .belso {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#rolunk .sz-cimke {
+  justify-content: center;
+}
+#rolunk .sz-cimke::before { display: none; }
+#rolunk .megjeleno {
+  background: rgba(8,8,8,0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 3rem 4rem;
+  max-width: 800px;
+  width: 100%;
+}
+#rolunk .rolunk-stats-sor {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+} */
+#rolunk .belso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#rolunk .sz-cimke {
+  justify-content: center;
+}
+#rolunk .sz-cimke::before { display: none; }
+#rolunk .megjeleno {
+  background: rgba(8,8,8,0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 3rem 4rem;
+  width: 100%;
+  max-width: 800px;
+}
+#rolunk .rolunk-fo-szoveg {
+  margin: 0 auto;
+}
+#rolunk .rolunk-stats-sor {
+  width: 100%;
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+/* ── Rólunk: rács felülírása hogy tényleg középre menjen ── */
+#rolunk .rolunk-racs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Szöveg láthatóság háttérképes szekciókon ── */
+.szekció-bg .sz-cim {
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.9);
+}
+.szekció-bg .sz-cimke {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+}
+.szekció-bg .sz-leiras {
+  color: #cccccc;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+}
+.szekció-bg .hk-cim {
+  color: #ffffff;
+}
+.szekció-bg .hero-szoveg {
+  color: #cccccc;
+}
+
+/* ── Kártyák sötétítése hogy a szöveg olvasható legyen ── */
+.szekció-bg .miert-kartya,
+.szekció-bg .szolg-k,
+.szekció-bg .tl-kartya,
+.szekció-bg .cert-kartya,
+.szekció-bg .szemely,
+.szekció-bg .urlap-doboz {
+  background: rgba(5,5,5,0.82);
+  border-color: rgba(255,255,255,0.10);
+}
+
+.szekció-bg .mk-szoveg,
+.szekció-bg .szolg-szoveg,
+.szekció-bg .tl-szoveg,
+.szekció-bg .cert-szoveg,
+.szekció-bg .minoseg-szoveg,
+.szekció-bg .rolunk-fo-szoveg {
+  color: #bbbbbb;
+}
+
+/* ── Hero kockák: üveg stílus ── */
+.hero-kocka {
+  background: rgba(8,8,8,0.68);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.09);
+}
+
+/* ── Szövegek: piros bal szegély + erős árnyék ── */
+.hero-szoveg,
+.sz-leiras,
+.minoseg-szoveg,
+.szekció-bg .sz-leiras,
+.szekció-bg .minoseg-szoveg {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.85;
+  letter-spacing: 0.3px;
+  text-shadow:
+    0 0 20px rgba(0,0,0,1),
+    0 0 40px rgba(0,0,0,1),
+    0 2px 4px rgba(0,0,0,1);
+  border-left: 3px solid var(--piros);
+  padding-left: 1.2rem;
+}
+
+.csapat-alcim {
+  color: var(--piros);
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow:
+    0 0 20px rgba(0,0,0,1),
+    0 2px 4px rgba(0,0,0,1);
+}
+[data-theme="light"] {
+  /* ── Navigáció ── */
+  --nav-bg: rgba(230,230,230,0.97);
+  --szoveg2: #222;
+  --szoveg3: #444;
+}
+
+/* Nav linkek */
+[data-theme="light"] .nav-linkek a { color: #333; }
+[data-theme="light"] .nav-linkek a:hover { background: rgba(0,0,0,0.08); color: #000; }
+[data-theme="light"] .mobil-menu { background: rgba(230,230,230,0.97); }
+[data-theme="light"] .mobil-menu a { color: #333; border-color: #ccc; }
+
+/* Logó váltás */
+[data-theme="light"] .nav-logo .logo-sotet   { display: block; }
+[data-theme="light"] .nav-logo .logo-vilagos  { display: none; }
+
+/* [data-theme="light"] .hero-logo-kep .logo-sotet  { display: none; }
+[data-theme="light"] .hero-logo-kep .logo-vilagos { display: block; } */
+
+/* Nyelvváltó */
+[data-theme="light"] .lang-gomb { background: #ddd; border-color: #bbb; color: #111; }
+[data-theme="light"] .lang-menu { background: #e0e0e0; border-color: #bbb; }
+[data-theme="light"] .lang-elem { color: #333; }
+[data-theme="light"] .lang-elem.aktiv { background: #ccc; color: #000; }
+
+/* Témaváltó gomb */
+[data-theme="light"] .tema-btn { background: #ddd; border-color: #bbb; color: #111; }
+
+/* ── Lábléc ── */
+[data-theme="light"] footer { background: #e0e0e0; border-color: #ccc; }
+[data-theme="light"] .footer-logo-txt { color: #444; }
+[data-theme="light"] .footer-link-lista a { color: #555; }
+[data-theme="light"] .footer-copy { color: #777; }
+
+/* ── Kártyák ── */
+[data-theme="light"] .miert-kartya,
+[data-theme="light"] .szolg-k,
+[data-theme="light"] .tl-kartya,
+[data-theme="light"] .cert-kartya,
+[data-theme="light"] .szemely,
+[data-theme="light"] .urlap-doboz {
+  background: rgba(240,240,240,0.88);
+  border-color: rgba(0,0,0,0.12);
+}
+
+/* Kártyák szövegei */
+[data-theme="light"] .mk-cim,
+[data-theme="light"] .mk-szoveg,
+[data-theme="light"] .szolg-cim,
+[data-theme="light"] .szolg-szoveg,
+[data-theme="light"] .tl-cim,
+[data-theme="light"] .tl-szoveg,
+[data-theme="light"] .cert-cim,
+[data-theme="light"] .cert-szoveg,
+[data-theme="light"] .sz-nev,
+
+[data-theme="light"] .urlap-fejlec-cim,
+[data-theme="light"] .mezo-cimke { color: #111; }
+
+[data-theme="light"] .sz-sor,
+[data-theme="light"] .sz-sor a { color: #333; }
+
+/* Mezők */
+[data-theme="light"] .mezo { background: rgba(255,255,255,0.75); border-color: #bbb; color: #111; }
+[data-theme="light"] .mezo::placeholder { color: #999; }
+
+/* Timeline szám */
+[data-theme="light"] .tl-szam { background: #e0e0e0; box-shadow: 0 0 0 4px #e0e0e0; }
+[data-theme="light"] .hero-kocka {
+  background: rgba(240,240,240,0.88);
+  border-color: rgba(0,0,0,0.12);
+}
+[data-theme="light"] .hk-cim { color: #111; }
+
+[data-theme="light"] #rolunk .megjeleno {
+  background: rgba(230,230,230,0.95);
+  border-color: rgba(0,0,0,0.10);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+[data-theme="light"] #rolunk .sz-cim ,
+[data-theme="light"] #rolunk .rolunk-fo-szoveg { color: #111; }
+
+[data-theme="light"] .stat-box {
+  background: rgba(240,240,240,0.88);
+  border-color: rgba(0,0,0,0.12);
+}
+[data-theme="light"] .stat-szam { color: var(--piros); }
+[data-theme="light"] .stat-cimke { color: #333; }
+
+.urlap-fejlec-vonal {
+  flex: 1;
+  height: 1px;
+  background: var(--piros);
 }
