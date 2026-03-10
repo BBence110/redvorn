@@ -1331,6 +1331,7 @@ footer {
 [data-theme="light"] .lang-elem { color: #333; }
 [data-theme="light"] .lang-elem.aktiv { background: #ccc; color: #000; }
 
+
 /* Témaváltó gomb */
 [data-theme="light"] .tema-btn { background: #ddd; border-color: #bbb; color: #111; }
 
@@ -1401,3 +1402,6 @@ footer {
   height: 1px;
   background: var(--piros);
 }
+/* Hamburger ikon */
+[data-theme="light"] .hamburger span { background: #111; }
+[data-theme="light"] .hamburger { background: #ddd; border-color: #bbb; color: #111;}
