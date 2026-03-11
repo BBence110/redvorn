@@ -117,7 +117,13 @@ nav {
 /* [data-theme="light"] .nav-linkek a:hover { background: rgba(0,0,0,0.06); } */
 
 /* Nav jobb oldal */
-.nav-jobb { margin-left: auto; display: flex; align-items: center; gap: 0.6rem; }
+.nav-jobb {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
 
 /* ── Nyelvválasztó ── */
 .lang-v { position: relative; }
@@ -722,6 +728,12 @@ footer {
   .urlap-sor { grid-template-columns: 1fr; }
   .belso { padding: 4rem 1.5rem; }
   .hero-tartalom { padding: 3rem 1.5rem; }
+  .lang-gomb { font-size: 0; padding: 7px 8px; }
+  .lang-gomb img { margin: 0; }
+  .lang-gomb .nyil { font-size: 0.55rem; display: none; }
+  .tema-btn { width: 32px; height: 32px; font-size: 0.9rem; }
+  .fb-gomb { width: 32px; height: 32px; }
+  .hamburger { width: 32px; height: 32px; }
 }
 @media (max-width: 580px) {
   .hero-gombok { flex-direction: column; }
@@ -1405,3 +1417,20 @@ footer {
 /* Hamburger ikon */
 [data-theme="light"] .hamburger span { background: #111; }
 [data-theme="light"] .hamburger { background: #ddd; border-color: #bbb; color: #111;}
+
+/* ── Facebook gomb ── */
+.fb-gomb {
+  width: 36px; height: 36px;
+  border-radius: var(--r);
+  border: 1px solid #1877f2;
+  background: #1877f2;
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem; font-weight: 700;
+  transition: background var(--atm), box-shadow var(--atm);
+  flex-shrink: 0;
+}
+.fb-gomb:hover { background: #1560cc; border-color: #1560cc; box-shadow: 0 4px 14px rgba(24,119,242,0.4); }
+
+[data-theme="light"] .fb-gomb { background: #1877f2; border-color: #1877f2; color: #fff; }
