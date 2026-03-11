@@ -1275,8 +1275,8 @@ footer {
 .szekció-bg .szolg-szoveg,
 .szekció-bg .tl-szoveg,
 .szekció-bg .cert-szoveg,
-.szekció-bg .minoseg-szoveg,
-.szekció-bg .rolunk-fo-szoveg {
+.szekció-bg .minoseg-szoveg
+{
   color: #bbbbbb;
 }
 
@@ -1433,4 +1433,70 @@ footer {
 }
 .fb-gomb:hover { background: #1560cc; border-color: #1560cc; box-shadow: 0 4px 14px rgba(24,119,242,0.4); }
 
+
+
 [data-theme="light"] .fb-gomb { background: #1877f2; border-color: #1877f2; color: #fff; }
+/* ── Kártya címek és szövegek láthatóbbá tétele ── */
+.mk-cim, .szolg-cim, .tl-cim, .cert-cim {
+  color: #ffffff;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.9);
+}
+
+.mk-szoveg, .szolg-szoveg, .tl-szoveg, .cert-szoveg {
+  color: #dddddd;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
+  font-weight: 400;
+}
+
+/* ── Rólunk blokk szövegek ── */
+#rolunk .sz-cim {
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,1);
+}
+#rolunk .rolunk-fo-szoveg {
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 1px 10px rgba(0,0,0,1);
+}
+.stat-cimke {
+  color: #cccccc;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+}
+.stat-szam {
+  text-shadow: 0 0 20px rgba(192,57,43,0.6);
+}
+
+/* ── Világos mód: Megbízható Ipari Partner gradiens ── */
+[data-theme="light"] #rolunk .sz-cim {
+  color: transparent;
+  background: linear-gradient(90deg, var(--piros), #444);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: none;
+}
+[data-theme="light"] #rolunk .rolunk-szoveg {
+  color: #111;
+  text-shadow: none;
+  font-weight: 400;
+}
+[data-theme="light"] .stat-cimke { color: #333; text-shadow: none; }
+[data-theme="light"] .mk-cim,
+[data-theme="light"] .szolg-cim,
+[data-theme="light"] .tl-cim,
+[data-theme="light"] .cert-cim { color: #111; text-shadow: none; }
+[data-theme="light"] .mk-szoveg,
+[data-theme="light"] .szolg-szoveg,
+[data-theme="light"] .tl-szoveg,
+[data-theme="light"] .cert-szoveg { color: #333; text-shadow: none; font-weight: 400; }
+
+#rolunk .rolunk-szoveg p {
+  color: #ffffff !important;
+  text-shadow: 0 1px 10px rgba(0,0,0,1) !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="light"] #rolunk .rolunk-szoveg p {
+  color: #111 !important;
+  text-shadow: none !important;
+  font-weight: 400 !important;
+}
