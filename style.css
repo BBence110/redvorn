@@ -1468,11 +1468,11 @@ footer {
 
 /* ── Világos mód: Megbízható Ipari Partner gradiens ── */
 [data-theme="light"] #rolunk .sz-cim {
-  color: transparent;
-  background: linear-gradient(90deg, var(--piros), #444);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--piros);
   text-shadow: none;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
 }
 [data-theme="light"] #rolunk .rolunk-szoveg {
   color: #111;
