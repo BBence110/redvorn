@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="nl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Redvorn Engineering – Lassen, pijpmontage en industriële montage in Hongarije en Europa.">
+
+  <title>Redvorn Engineering</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="pics/favicon1.ico">
+
+
+  <!-- Saját CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGÁCIÓ
+═══════════════════════════════════════════ -->
+<nav>
+  <a class="nav-logo" href="#fooldal">
+    <img class="logo-vilagos" src="pics/redvorn-v-logo1.png" alt="Redvorn Engineering" >
+    <img class="logo-sotet" src="pics/redvorn-s-logo.png" alt="Redvorn Engineering" >
+  </a>
+
+  <!-- Navigációs linkek -->
+  <ul class="nav-linkek">
+    <li><a href="#fooldal">Startpagina</a></li>
+    <li><a href="#rolunk">Over ons</a></li>
+    <li><a href="#miert">Waarom wij</a></li>
+    <li><a href="#szolgaltatasok">Diensten</a></li>
+    <li><a href="#folyamat">Werkwijze</a></li>
+    <li><a href="#minoseg">Kwaliteit</a></li>
+    <li><a href="#kapcsolat">Contact</a></li>
+  </ul>
+
+  <!-- Jobb oldal: nyelvváltó + témaváltó + hamburger -->
+  <div class="nav-jobb">
+
+    <!-- Facebook gomb -->
+    <a href="https://www.facebook.com/REDVORN" target="_blank" class="fb-gomb" title="Facebook">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047v-2.66c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.266h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+      </svg>
+    </a>
+    <!-- Nyelvválasztó -->
+    <div class="lang-v" id="langV">
+      <button class="lang-gomb" id="langGomb">
+         <img src="https://flagcdn.com/w20/nl.png" srcset="https://flagcdn.com/w40/nl.png 2x" width="20" alt="Netherlands">
+          Nederlands <span class="nyil">▾</span>
+        </button>
+      <div class="lang-menu">
+        <div class="lang-elem" data-lang="hu">
+          <img src="https://flagcdn.com/w20/hu.png" srcset="https://flagcdn.com/w40/hu.png 2x" width="20" alt="Magyar"> Magyar
+        </div>
+        <div class="lang-elem" data-lang="en">
+          <img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="English"> English
+        </div>
+        <div class="lang-elem" data-lang="de">
+          <img src="https://flagcdn.com/w20/de.png" srcset="https://flagcdn.com/w40/de.png 2x" width="20" alt="Deutsch"> Deutsch
+        </div>
+        <div class="lang-elem aktiv" data-lang="nl">
+          <img src="https://flagcdn.com/w20/nl.png" srcset="https://flagcdn.com/w40/nl.png 2x" width="20" alt="Netherlands"> Nederlands
+        </div>
+      </div>
+    </div>
+
+    <!-- Témaváltó -->
+    <button class="tema-btn" id="temaBtn" title="Donker/Licht modus">🌙</button>
+
+    <!-- Hamburger (mobil) -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobil legördülő menü -->
+<div class="mobil-menu" id="mobilMenu">
+  <a href="#fooldal">Startpagina</a>
+  <a href="#rolunk">Over ons</a>
+  <a href="#miert">Waarom wij</a>
+  <a href="#szolgaltatasok">Diensten</a>
+  <a href="#folyamat">Werkwijze</a>
+  <a href="#minoseg">Kwaliteit</a>
+  <a href="#kapcsolat">Contact</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     FŐOLDAL / HERO
+═══════════════════════════════════════════ -->
+<section class="szekció" id="fooldal">
+
+  <div class="hero-media">
+  <video class="hero-video" autoplay muted loop playsinline poster="hatter-poster.jpg">
+    <source src="pics/RVIDEO.mp4" type="video/mp4">
+  </video>
+</div>
+
+  <div class="hero-tartalom">
+
+    <!-- BAL oldal: logó + szöveg + gombok -->
+    <div class="hero-bal">
+
+      <div class="hero-logo-kep">
+        <img class="logo-sotet" src="pics/redvorn-s-logo.png" alt="Redvorn Engineering"> 
+        <img class="logo-vilagos" src="pics/redvorn-v-logo1.png" alt="Redvorn Engineering"> 
+      </div>
+
+      <p class="hero-szoveg">
+        Als betrouwbare industriële onderaannemer voeren wij las-,
+        pijpmontage- en complexe industriële montagewerkzaamheden uit
+        in Hongarije en door heel Europa.
+      </p>
+
+      <div class="hero-gombok">
+        <a href="#kapcsolat" class="gomb-piros">Offerte aanvragen</a>
+        <a href="#szolgaltatasok" class="gomb-ures">Onze diensten</a>
+      </div>
+
+    </div><!-- /hero-bal -->
+
+    <!-- JOBB oldal: 4 dekoratív kocka -->
+    <div class="hero-jobb">
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.1s">
+        <div class="hk-cim">Precieze Uitvoering</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.2s">
+        <div class="hk-cim">Betrouwbare Samenwerking</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.3s">
+        <div class="hk-cim">Flexibele Werkwijze</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.4s">
+        <div class="hk-cim">Veilige Werkomgeving</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+    </div><!-- /hero-jobb -->
+
+  </div><!-- /hero-tartalom -->
+
+</section>
+
+
+<div class="elvaszto"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     RÓLUNK
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="rolunk">
+  <div class="belso">
+    <div class="rolunk-racs">
+
+      <!-- Bal oldal: szöveg -->
+      <div class="megjeleno">
+        <div class="sz-cimke">Over ons</div>
+        <h2 class="sz-cim">BETROUWBARE<br>INDUSTRIËLE PARTNER</h2>
+        <div class="rolunk-szoveg">
+          <p>
+            REDVORN is een bedrijf gespecialiseerd in industrieel lassen en pijpmontage, dat hoogwaardige technische oplossingen biedt aan industriële partners.
+            Ons doel is om onze opdrachtgevers een stabiele, veilige en langdurig betrouwbare uitvoering te garanderen die voldoet aan de hoogste professionele eisen.
+            In ons werk besteden wij bijzondere aandacht aan nauwkeurige planning, kwalitatieve uitvoering en het strikt naleven van deadlines.
+            Onze ervaren vakmensen en geavanceerde technologieën stellen ons in staat om ook bij complexe industriële projecten als een efficiënte en betrouwbare partner op te treden.
+            Voor REDVORN vertegenwoordigen kwaliteit, vakmanschap en langdurige samenwerking de ware meerwaarde.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /rolunk-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+     MIERT MINKET
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="miert">
+  <div class="belso">
+
+    <div class="miert-fejlec megjeleno">
+      <div class="sz-cimke">Waarom wij</div>
+      <h2 class="sz-cim">WAAROM <span class="piros-txt">REDVORN</span>?</h2>
+    </div>
+
+    <div class="miert-racs">
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Precieze Uitvoering</div>
+        <p class="mk-szoveg">Elk werk wordt op tijd en volgens de afgesproken kwaliteitsnormen uitgevoerd — zonder compromissen.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Flexibele Aanpak</div>
+        <p class="mk-szoveg">Wij reageren snel op projectwijzigingen en passen onze capaciteit op elk moment aan uw eisen aan.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Internationale Ervaring</div>
+        <p class="mk-szoveg">Industriële uitvoeringservaring opgedaan in meerdere Europese landen, met grondige kennis van EU-normen en werkomgevingen.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Partnergerichte Instelling</div>
+        <p class="mk-szoveg">Of het nu om een eenmalige opdracht of een langlopend project gaat, wij voeren elk werk uit met dezelfde professionele verantwoordelijkheid en toewijding.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Snelle Probleemoplossing</div>
+        <p class="mk-szoveg">Technische knelpunten worden direct aangepakt zodat de uitvoeringsplanning vlekkeloos verloopt.</p>
+      </div>
+
+    </div><!-- /miert-racs -->
+  </div>
+</section>
+<div class="elvaszto"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     SZOLGÁLTATÁSOK
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="szolgaltatasok">
+  <div class="belso">
+    <div class="sz-cimke megjeleno">Diensten</div>
+    <h2 class="sz-cim megjeleno">WAT WIJ BIEDEN</h2>
+    <p class="sz-leiras megjeleno">
+      Wij realiseren complexe industriële uitvoeringstaken als onderaannemer, op basis van opdrachtgeverstekeningen en technische documentatie.
+    </p>
+
+    <div class="szolg-racs">
+
+      <!-- Kártya 1 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-cim">Industrieel Lassen</div>
+        <p class="szolg-szoveg">
+          Lassen van proces- en industriële leidingsystemen in koolstofstaal en roestvast staal.
+          Onze specialisatie is pijplassen, waarbij wij bijzondere aandacht besteden aan nauwkeurige passing, kwalitatieve lasverbindingen en het tot stand brengen van duurzaam betrouwbare verbindingen.
+        </p>
+      </div>
+
+      <!-- Kártya 2 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-cim">Pijpmontage</div>
+        <p class="szolg-szoveg">
+          Montage, ombouw en installatie van proces- en industriële leidingsystemen op basis van opdrachtgeverstekeningen.
+          In ons werk streven wij naar nauwkeurige uitvoering, veilige werking en het opbouwen van duurzame industriële systemen.
+        </p>
+      </div>
+
+      <!-- Kártya 3 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-cim">Industriële Montage</div>
+        <p class="szolg-szoveg">
+          Kleinere industriële montagewerkzaamheden en installatie van werktuigbouwkundige componenten in industriële omgevingen, als aanvullende werkzaamheden binnen projectkaders.
+        </p>
+      </div>
+    
+
+    </div><!-- /szolg-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+              FOLYAMAT
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="folyamat">
+  <div class="belso">
+
+    <div class="megjeleno">
+      <div class="sz-cimke">Werkwijze</div>
+      <h2 class="sz-cim">HOE WIJ WERKEN</h2>
+      <p class="sz-leiras">Een transparant en rechtlijnig proces — van het eerste contact tot de oplevering.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">01</div>
+        <div class="tl-vonal"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Eerste Contact</div>
+          <p class="tl-szoveg">Bespreking van wensen en projecten. Wij leren de opdracht en de deadlines kennen.</p>
+        </div>
+      </div>
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">02</div>
+        <div class="tl-vonal"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Opname</div>
+          <p class="tl-szoveg">Afstemming van technische details, plaatsbezoek indien nodig, opstellen van de offerte.</p>
+        </div>
+      </div>
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">03</div>
+        <div class="tl-vonal"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Uitvoering</div>
+          <p class="tl-szoveg">Nauwkeurige en veilige uitvoering met doorlopende communicatie.</p>
+        </div>
+      </div>
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">04</div>
+        <div class="tl-vonal tl-vonal-utolso"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Oplevering</div>
+          <p class="tl-szoveg">Overdracht van de gecontroleerde, voltooide oplossing.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+              MINOSEG
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="minoseg">
+  <div class="belso">
+    <div class="minoseg-racs">
+
+      <!-- Bal: szöveg -->
+      <div class="megjeleno">
+        <div class="sz-cimke">Kwaliteit</div>
+        <h2 class="sz-cim">KWALITEIT EN<br>UITRUSTING</h2>
+        <p class="minoseg-szoveg">
+          Ons team bestaat uit gecertificeerde lasvakmensen die werken met de modernste industriële lasapparatuur. Alle teamleden beschikken over de kwalificaties en veiligheidscertificaten die vereist zijn voor internationaal industrieel werk.
+        </p>
+        <p class="minoseg-szoveg">
+          Onze uitvoeringswerken voldoen in alle opzichten aan de Europese industriële normen en veiligheidsvoorschriften.
+        </p>
+      </div>
+
+      <!-- Jobb: tanúsítvány kártyák -->
+      <div class="cert-lista">
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">VCA Veiligheidscertificaat</div>
+            <div class="cert-szoveg">Internationaal erkende kwalificatie voor veiligheid en gezondheid op het werk</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">Geldige Lasserskwalificaties</div>
+            <div class="cert-szoveg">Lasexamens conform de EN ISO 9606 norm</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">Industriële Veiligheidsvergunningen</div>
+            <div class="cert-szoveg">Ons team beschikt over alle veiligheids- en arbovergunningen die vereist zijn voor internationaal industrieel werk.</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">Internationale Projectdocumentatie</div>
+            <div class="cert-szoveg">Alle benodigde documenten en vergunningen voor werkzaamheden binnen de EU</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">EU-Klaar Team</div>
+            <div class="cert-szoveg">Ons team beschikt over industriële uitvoeringservaring opgedaan in meerdere Europese landen.</div>
+          </div>
+        </div>
+
+      </div><!-- /cert-lista -->
+    </div><!-- /minoseg-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+     KAPCSOLAT
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="kapcsolat">
+  <div class="belso">
+    <div class="sz-cimke megjeleno">Contact</div>
+    <h2 class="sz-cim megjeleno">NEEM CONTACT OP</h2>
+    
+
+    <div class="kapcsolat-racs">
+
+      <!-- Bal: csapat -->
+      <div>
+        <p class="csapat-alcim megjeleno">Ons Team</p>
+        <div class="csapat">
+          <div class="szemely megjeleno">
+            <div class="sz-nev">Sváb Martin</div>
+            <div class="sz-pozicio">Directeur | Eigenaar | Operationele Leiding</div>
+            <div class="sz-eler">
+              <div class="sz-sor">
+                <div class="sz-ik">📞</div>
+                <a href="tel:+36703074571">+36 70 307 4571</a>
+              </div>
+              <div class="sz-sor">
+                <div class="sz-ik">✉️</div>
+                <a href="mailto:info@redvorn.com">info@redvorn.com</a>
+              </div>
+              
+              <div class="sz-sor">
+                <div class="sz-ik">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="#25D366">
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                  </svg>
+                </div>
+                <a href="" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="szemely megjeleno">
+            <div class="sz-nev">Jurák Botond</div>
+            <div class="sz-pozicio">Eigenaar</div>
+            <div class="sz-eler">
+              <div class="sz-sor">
+                <div class="sz-ik">📞</div>
+                <a href="tel:+36705973932">+36 70 597 3932</a>
+              </div>
+              <div class="sz-sor">
+                <div class="sz-ik">✉️</div>
+                <a href="mailto:info@redvorn.com">info@redvorn.com</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /csapat -->
+      </div>
+
+      <!-- Jobb: kapcsolatfelvevő űrlap -->
+      <div class="urlap-doboz megjeleno">
+        <div class="urlap-fejlec">
+          <div class="urlap-fejlec-cim">Schrijf ons</div>
+          <div class="urlap-fejlec-vonal"></div>
+        </div>
+
+        <form id="kapcsolatUrlap" name="contact-nl" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact-nl">
+            <p style="display:none"><input name="bot-field"></p>
+          <div class="urlap-sor">
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Naam</label>
+              <input class="mezo" type="text" name="nev" placeholder="Volledige naam" required>
+            </div>
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Bedrijf</label>
+              <input class="mezo" type="text" name="ceg" placeholder="Bedrijfsnaam (optioneel)">
+            </div>
+          </div>
+          <div class="urlap-sor">
+            <div class="mezocsoport">
+              <label class="mezo-cimke">E-mail</label>
+              <input class="mezo" type="email" name="email" placeholder="voorbeeld@gmail.com" required>
+            </div>
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Telefoon</label>
+              <input class="mezo" type="tel" name="telefon" placeholder="+31 xx xxx xxxx">
+            </div>
+          </div>
+          <div class="mezocsoport">
+            <label class="mezo-cimke">Bericht</label>
+            <textarea class="mezo" name="uzenet" placeholder="Korte omschrijving van het project of de vraag..." required></textarea>
+          </div>
+          <button type="submit" class="kuldes-btn">
+            Bericht versturen &rarr;
+          </button>
+        </form>
+
+        <!-- Sikeres küldés visszajelzés -->
+        <div class="urlap-ok" id="urlapOk">
+          <div class="pip">✅</div>
+          <h3>Bericht verzonden!</h3>
+          <p>Wij nemen spoedig contact met u op.</p>
+        </div>
+
+      </div><!-- /urlap-doboz -->
+
+    </div><!-- /kapcsolat-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-belso">
+    <a class="nav-logo" href="#fooldal">
+    <img class="logo-vilagos" src="pics/redvorn-v-logo1.png" alt="Redvorn Engineering" >
+    <img class="logo-sotet" src="pics/redvorn-s-logo.png" alt="Redvorn Engineering" >
+    </a>
+
+    <!-- Nav linkek -->
+    <div class="footer-link-lista">
+      <a href="#fooldal">Startpagina</a>
+      <a href="#rolunk">Over ons</a>
+      <a href="#miert">Waarom wij</a>
+      <a href="#szolgaltatasok">Diensten</a>
+      <a href="#folyamat">Werkwijze</a>
+      <a href="#minoseg">Kwaliteit</a>
+      <a href="#kapcsolat">Contact</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="footer-copy">
+      &copy; 2026 Redvorn | All rights reserved
+    </p>
+
+  </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Redvorn Engineering – Welding, pipework and industrial assembly in Hungary and across Europe.">
+
+  <title>Redvorn Engineering</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="pics/favicon1.ico">
+
+
+  <!-- Saját CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGÁCIÓ
+═══════════════════════════════════════════ -->
+<nav>
+  <a class="nav-logo" href="#fooldal">
+    <img class="logo-vilagos" src="pics/redvorn-v-logo1.png" alt="Redvorn Engineering" >
+    <img class="logo-sotet" src="pics/redvorn-s-logo.png" alt="Redvorn Engineering" >
+  </a>
+
+  <!-- Navigációs linkek -->
+  <ul class="nav-linkek">
+    <li><a href="#fooldal">Home</a></li>
+    <li><a href="#rolunk">About us</a></li>
+    <li><a href="#miert">Why us</a></li>
+    <li><a href="#szolgaltatasok">Services</a></li>
+    <li><a href="#folyamat">Process</a></li>
+    <li><a href="#minoseg">Quality</a></li>
+    <li><a href="#kapcsolat">Contact</a></li>
+  </ul>
+
+  <!-- Jobb oldal: nyelvváltó + témaváltó + hamburger -->
+  <div class="nav-jobb">
+
+    <!-- Facebook gomb -->
+    <a href="https://www.facebook.com/REDVORN" target="_blank" class="fb-gomb" title="Facebook">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 12.073C24 5.404 18.627 0 12 0S0 5.404 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047v-2.66c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.266h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+      </svg>
+    </a>
+    <!-- Nyelvválasztó -->
+    <div class="lang-v" id="langV">
+      <button class="lang-gomb" id="langGomb">
+         <img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="English">
+          English <span class="nyil">▾</span>
+        </button>
+      <div class="lang-menu">
+        <div class="lang-elem" data-lang="hu">
+          <img src="https://flagcdn.com/w20/hu.png" srcset="https://flagcdn.com/w40/hu.png 2x" width="20" alt="Magyar"> Magyar
+        </div>
+        <div class="lang-elem aktiv" data-lang="en">
+          <img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="English"> English
+        </div>
+        <div class="lang-elem" data-lang="de">
+          <img src="https://flagcdn.com/w20/de.png" srcset="https://flagcdn.com/w40/de.png 2x" width="20" alt="Deutsch"> Deutsch
+        </div>
+        <div class="lang-elem" data-lang="nl">
+          <img src="https://flagcdn.com/w20/nl.png" srcset="https://flagcdn.com/w40/nl.png 2x" width="20" alt="Netherlands"> Nederlands
+        </div>
+      </div>
+    </div>
+
+    <!-- Témaváltó -->
+    <button class="tema-btn" id="temaBtn" title="Dark/Light mode">🌙</button>
+
+    <!-- Hamburger (mobil) -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-- Mobil legördülő menü -->
+<div class="mobil-menu" id="mobilMenu">
+  <a href="#fooldal">Home</a>
+  <a href="#rolunk">About us</a>
+  <a href="#miert">Why us</a>
+  <a href="#szolgaltatasok">Services</a>
+  <a href="#folyamat">Process</a>
+  <a href="#minoseg">Quality</a>
+  <a href="#kapcsolat">Contact</a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     FŐOLDAL / HERO
+═══════════════════════════════════════════ -->
+<section class="szekció" id="fooldal">
+
+  <div class="hero-media">
+  <video class="hero-video" autoplay muted loop playsinline poster="hatter-poster.jpg">
+    <source src="pics/RVIDEO.mp4" type="video/mp4">
+  </video>
+</div>
+
+  <div class="hero-tartalom">
+
+    <!-- BAL oldal: logó + szöveg + gombok -->
+    <div class="hero-bal">
+
+      <div class="hero-logo-kep">
+        <img class="logo-sotet" src="pics/redvorn-s-logo.png" alt="Redvorn Engineering"> 
+        <img class="logo-vilagos" src="pics/redvorn-v-logo1.png" alt="Redvorn Engineering"> 
+      </div>
+
+      <p class="hero-szoveg">
+        As a reliable industrial subcontractor, we undertake welding,
+        pipework and complex industrial assembly projects
+        across Hungary and Europe.
+      </p>
+
+      <div class="hero-gombok">
+        <a href="#kapcsolat" class="gomb-piros">Request a Quote</a>
+        <a href="#szolgaltatasok" class="gomb-ures">Our Services</a>
+      </div>
+
+    </div><!-- /hero-bal -->
+
+    <!-- JOBB oldal: 4 dekoratív kocka -->
+    <div class="hero-jobb">
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.1s">
+        <div class="hk-cim">Precise Execution</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.2s">
+        <div class="hk-cim">Reliable Partnership</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.3s">
+        <div class="hk-cim">Flexible Working</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+      <div class="hero-kocka megjeleno" style="--delay: 0.4s">
+        <div class="hk-cim">Safe Work Environment</div>
+        <div class="hk-dísz"></div>
+      </div>
+
+    </div><!-- /hero-jobb -->
+
+  </div><!-- /hero-tartalom -->
+
+</section>
+
+
+<div class="elvaszto"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     RÓLUNK
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="rolunk">
+  <div class="belso">
+    <div class="rolunk-racs">
+
+      <!-- Bal oldal: szöveg -->
+      <div class="megjeleno">
+        <div class="sz-cimke">About us</div>
+        <h2 class="sz-cim">RELIABLE<br>INDUSTRIAL PARTNER</h2>
+        <div class="rolunk-szoveg">
+          <p>
+            REDVORN is a company specialising in industrial welding and pipework, offering high-quality technical solutions to its industrial partners.
+            Our goal is to provide our clients with stable, safe and long-term reliable execution that meets the highest professional standards.
+            In our work, we place particular emphasis on precise planning, quality execution and strict adherence to deadlines.
+            Our experienced professionals and state-of-the-art technology enable us to operate as an efficient and dependable partner even in complex industrial projects.
+            For REDVORN, quality, professional excellence and long-term cooperation represent true value.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /rolunk-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+     MIERT MINKET
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="miert">
+  <div class="belso">
+
+    <div class="miert-fejlec megjeleno">
+      <div class="sz-cimke">Why us</div>
+      <h2 class="sz-cim">WHY <span class="piros-txt">REDVORN</span>?</h2>
+    </div>
+
+    <div class="miert-racs">
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Precise Execution</div>
+        <p class="mk-szoveg">Every project is completed on time and to the agreed quality standards — without compromise.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Flexible Approach</div>
+        <p class="mk-szoveg">We respond swiftly to project changes and adapt our capacity to meet your requirements at any time.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">International Experience</div>
+        <p class="mk-szoveg">Industrial execution experience gained across multiple European countries, with thorough knowledge of EU standards and working environments.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Partnership Mindset</div>
+        <p class="mk-szoveg">Whether it is a one-off task or a long-term project, we approach every assignment with the same professional responsibility and commitment.</p>
+      </div>
+
+      <div class="miert-kartya megjeleno">
+        <div class="mk-cim">Rapid Problem Solving</div>
+        <p class="mk-szoveg">We address any technical issues immediately to ensure the execution schedule remains on track.</p>
+      </div>
+
+    </div><!-- /miert-racs -->
+  </div>
+</section>
+<div class="elvaszto"></div>
+
+
+<!-- ═══════════════════════════════════════════
+     SZOLGÁLTATÁSOK
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="szolgaltatasok">
+  <div class="belso">
+    <div class="sz-cimke megjeleno">Services</div>
+    <h2 class="sz-cim megjeleno">WHAT WE OFFER</h2>
+    <p class="sz-leiras megjeleno">
+      We carry out complex industrial construction tasks as a subcontractor, based on client drawings and technical documentation.
+    </p>
+
+    <div class="szolg-racs">
+
+      <!-- Kártya 1 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-cim">Industrial Welding</div>
+        <p class="szolg-szoveg">
+          Welding of process and industrial pipeline systems in carbon steel and stainless steel.
+          Our specialisation is pipe welding, where we place particular focus on precise fit-up, quality welds and the creation of long-term reliable joints.
+        </p>
+      </div>
+
+      <!-- Kártya 2 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-cim">Pipework</div>
+        <p class="szolg-szoveg">
+          Installation, modification and commissioning of process and industrial pipeline systems based on client drawings.
+          In our work, we strive for precise execution, safe operation and the creation of durable industrial systems.
+        </p>
+      </div>
+
+      <!-- Kártya 3 -->
+      <div class="szolg-k megjeleno">
+        <div class="szolg-cim">Industrial Assembly</div>
+        <p class="szolg-szoveg">
+          Smaller-scale industrial assembly tasks and installation of mechanical components in industrial environments, as supplementary works within project scopes.
+        </p>
+      </div>
+    
+
+    </div><!-- /szolg-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+              FOLYAMAT
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="folyamat">
+  <div class="belso">
+
+    <div class="megjeleno">
+      <div class="sz-cimke">Process</div>
+      <h2 class="sz-cim">HOW WE WORK</h2>
+      <p class="sz-leiras">A transparent and straightforward process — from the first contact through to handover.</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">01</div>
+        <div class="tl-vonal"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Initial Contact</div>
+          <p class="tl-szoveg">Discussion of requirements and projects. We get to know the task and the deadlines.</p>
+        </div>
+      </div>
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">02</div>
+        <div class="tl-vonal"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Assessment</div>
+          <p class="tl-szoveg">Coordination of technical details, on-site survey if required, preparation of the offer.</p>
+        </div>
+      </div>
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">03</div>
+        <div class="tl-vonal"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Execution</div>
+          <p class="tl-szoveg">Precise and safe workmanship, with continuous communication throughout.</p>
+        </div>
+      </div>
+
+      <div class="tl-elem megjeleno">
+        <div class="tl-szam">04</div>
+        <div class="tl-vonal tl-vonal-utolso"></div>
+        <div class="tl-kartya">
+          <div class="tl-cim">Handover</div>
+          <p class="tl-szoveg">Delivery of a verified, completed solution.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /timeline -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+              MINOSEG
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="minoseg">
+  <div class="belso">
+    <div class="minoseg-racs">
+
+      <!-- Bal: szöveg -->
+      <div class="megjeleno">
+        <div class="sz-cimke">Quality</div>
+        <h2 class="sz-cim">QUALITY &amp;<br>CAPABILITIES</h2>
+        <p class="minoseg-szoveg">
+          Our team consists of certified welding professionals working with state-of-the-art industrial welding equipment. Every team member holds the qualifications and safety certifications required for international industrial work.
+        </p>
+        <p class="minoseg-szoveg">
+          Our execution work fully complies with European industrial standards and safety regulations in every respect.
+        </p>
+      </div>
+
+      <!-- Jobb: tanúsítvány kártyák -->
+      <div class="cert-lista">
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">VCA Safety Certificate</div>
+            <div class="cert-szoveg">Internationally recognised occupational health and safety qualification</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">Valid Welder Qualifications</div>
+            <div class="cert-szoveg">Welding examinations in accordance with EN ISO 9606 standard</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">Industrial Safety Authorisations</div>
+            <div class="cert-szoveg">Our team holds all safety and occupational health authorisations required for international industrial operations.</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">International Project Documentation</div>
+            <div class="cert-szoveg">All necessary documents and permits for working within the EU</div>
+          </div>
+        </div>
+
+        <div class="cert-kartya megjeleno">
+          <div class="cert-bal">
+            <div class="cert-pip">✓</div>
+          </div>
+          <div class="cert-jobb">
+            <div class="cert-cim">EU-Ready Team</div>
+            <div class="cert-szoveg">Our team holds industrial execution experience gained across multiple European countries.</div>
+          </div>
+        </div>
+
+      </div><!-- /cert-lista -->
+    </div><!-- /minoseg-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+     KAPCSOLAT
+═══════════════════════════════════════════ -->
+<section class="szekció szekció-bg" id="kapcsolat">
+  <div class="belso">
+    <div class="sz-cimke megjeleno">Contact</div>
+    <h2 class="sz-cim megjeleno">GET IN TOUCH</h2>
+    
+
+    <div class="kapcsolat-racs">
+
+      <!-- Bal: csapat -->
+      <div>
+        <p class="csapat-alcim megjeleno">Our Team</p>
+        <div class="csapat">
+          <div class="szemely megjeleno">
+            <div class="sz-nev">Sváb Martin</div>
+            <div class="sz-pozicio">Managing Director | Owner | Operations</div>
+            <div class="sz-eler">
+              <div class="sz-sor">
+                <div class="sz-ik">📞</div>
+                <a href="tel:+36703074571">+36 70 307 4571</a>
+              </div>
+              <div class="sz-sor">
+                <div class="sz-ik">✉️</div>
+                <a href="mailto:info@redvorn.com">info@redvorn.com</a>
+              </div>
+              
+              <div class="sz-sor">
+                <div class="sz-ik">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="#25D366">
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                  </svg>
+                </div>
+                <a href="" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="szemely megjeleno">
+            <div class="sz-nev">Jurák Botond</div>
+            <div class="sz-pozicio">Owner</div>
+            <div class="sz-eler">
+              <div class="sz-sor">
+                <div class="sz-ik">📞</div>
+                <a href="tel:+36705973932">+36 70 597 3932</a>
+              </div>
+              <div class="sz-sor">
+                <div class="sz-ik">✉️</div>
+                <a href="mailto:info@redvorn.com">info@redvorn.com</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /csapat -->
+      </div>
+
+      <!-- Jobb: kapcsolatfelvevő űrlap -->
+      <div class="urlap-doboz megjeleno">
+        <div class="urlap-fejlec">
+          <div class="urlap-fejlec-cim">Write to Us</div>
+          <div class="urlap-fejlec-vonal"></div>
+        </div>
+
+        <form id="kapcsolatUrlap" name="contact-en" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact-en">
+            <p style="display:none"><input name="bot-field"></p>
+          <div class="urlap-sor">
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Name</label>
+              <input class="mezo" type="text" name="nev" placeholder="Full name" required>
+            </div>
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Company</label>
+              <input class="mezo" type="text" name="ceg" placeholder="Company name (optional)">
+            </div>
+          </div>
+          <div class="urlap-sor">
+            <div class="mezocsoport">
+              <label class="mezo-cimke">E-mail</label>
+              <input class="mezo" type="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+            <div class="mezocsoport">
+              <label class="mezo-cimke">Phone</label>
+              <input class="mezo" type="tel" name="telefon" placeholder="+44 xx xxx xxxx">
+            </div>
+          </div>
+          <div class="mezocsoport">
+            <label class="mezo-cimke">Message</label>
+            <textarea class="mezo" name="uzenet" placeholder="Brief description of the project or requirement..." required></textarea>
+          </div>
+          <button type="submit" class="kuldes-btn">
+            Send Message &rarr;
+          </button>
+        </form>
+
+        <!-- Sikeres küldés visszajelzés -->
+        <div class="urlap-ok" id="urlapOk">
+          <div class="pip">✅</div>
+          <h3>Message Sent!</h3>
+          <p>We will be in touch with you shortly.</p>
+        </div>
+
+      </div><!-- /urlap-doboz -->
+
+    </div><!-- /kapcsolat-racs -->
+  </div>
+</section>
+
+<div class="elvaszto"></div>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-belso">
+    <a class="nav-logo" href="#fooldal">
+    <img class="logo-vilagos" src="pics/redvorn-v-logo1.png" alt="Redvorn Engineering" >
+    <img class="logo-sotet" src="pics/redvorn-s-logo.png" alt="Redvorn Engineering" >
+    </a>
+
+    <!-- Nav linkek -->
+    <div class="footer-link-lista">
+      <a href="#fooldal">Home</a>
+      <a href="#rolunk">About us</a>
+      <a href="#miert">Why us</a>
+      <a href="#szolgaltatasok">Services</a>
+      <a href="#folyamat">Process</a>
+      <a href="#minoseg">Quality</a>
+      <a href="#kapcsolat">Contact</a>
+    </div>
+
+    <!-- Copyright -->
+    <p class="footer-copy">
+      &copy; 2026 Redvorn | All rights reserved
+    </p>
+
+  </div>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="main.js"></script>
+
+</body>
+</html>
