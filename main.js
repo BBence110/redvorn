@@ -161,16 +161,22 @@ document.addEventListener('DOMContentLoaded', function () {
   if (urlap) {
     urlap.addEventListener('submit', function(e) {
       e.preventDefault();
-      urlap.style.display = 'none';
-      urlapOk.classList.add('latszik');
-      /* ── Ha valódi küldés kell, itt integráld a Formspree-t vagy EmailJS-t ──
-         Például Formspree:
-         fetch('https://formspree.io/f/XXXXXXXX', {
-           method: 'POST',
-           body: new FormData(urlap),
-           headers: { 'Accept': 'application/json' }
-         });
-      */
+      
+      const formData = new FormData(urlap);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(() => {
+        urlap.style.display = 'none';
+        urlapOk.classList.add('latszik');
+      })
+      .catch((error) => {
+        alert('Hiba történt, kérjük próbálja újra.');
+        console.error(error);
+      });
     });
   }
 

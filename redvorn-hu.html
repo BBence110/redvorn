@@ -385,7 +385,7 @@
         <p class="szolg-szoveg">
 
          Kisebb ipari szerelési feladatok és gépészeti elemek telepítése ipari környezetben, projektekhez kapcsolódó kiegészítő munkák keretében.
-         
+
         </p>
       </div>
     
@@ -625,7 +625,9 @@
 
         <!-- Ha valódi e-mail küldést akarsz, add meg a Formspree action-t:
              <form id="kapcsolatUrlap" action="https://formspree.io/f/XXXXXXXX" method="POST"> -->
-        <form id="kapcsolatUrlap">
+        <form id="kapcsolatUrlap" name="contact" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none"><input name="bot-field"></p>
           <div class="urlap-sor">
             <div class="mezocsoport">
               <label class="mezo-cimke">Név</label>
