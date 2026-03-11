@@ -155,30 +155,34 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ════════════════════════════════════
      5. KAPCSOLATI ŰRLAP
   ════════════════════════════════════ */
-  const urlap   = document.getElementById('kapcsolatUrlap');
-  const urlapOk = document.getElementById('urlapOk');
+const urlap   = document.getElementById('kapcsolatUrlap');
+const urlapOk = document.getElementById('urlapOk');
 
-  if (urlap) {
-    urlap.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(urlap);
+if (urlap) {
+  urlap.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(() => {
+    const formData = new FormData(urlap);
+
+    fetch(window.location.pathname, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(response => {
+      if (response.ok) {
         urlap.style.display = 'none';
         urlapOk.classList.add('latszik');
-      })
-      .catch((error) => {
-        alert('Hiba történt, kérjük próbálja újra.');
-        console.error(error);
-      });
+      } else {
+        throw new Error('Hálózati hiba: ' + response.status);
+      }
+    })
+    .catch((error) => {
+      alert('Hiba történt, kérjük próbálja újra.');
+      console.error('Form hiba:', error);
     });
-  }
+  });
+}
 
 
   /* ════════════════════════════════════

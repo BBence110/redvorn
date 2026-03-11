@@ -623,11 +623,14 @@
           <div class="urlap-fejlec-vonal"></div>
         </div>
 
-        <!-- Ha valódi e-mail küldést akarsz, add meg a Formspree action-t:
-             <form id="kapcsolatUrlap" action="https://formspree.io/f/XXXXXXXX" method="POST"> -->
-        <form id="kapcsolatUrlap" name="contact" netlify netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
-            <p style="display:none"><input name="bot-field"></p>
+
+        <form id="kapcsolatUrlap" name="contact-hu" 
+              data-netlify="true" 
+              data-netlify-honeypot="bot-field"
+              netlify>
+          
+          <input type="hidden" name="form-name" value="contact-hu">
+          <p style="display:none"><input name="bot-field"></p>
           <div class="urlap-sor">
             <div class="mezocsoport">
               <label class="mezo-cimke">Név</label>
